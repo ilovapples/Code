@@ -1,5 +1,9 @@
+import os
+def clear():
+    os.system('cls')
 board = ["_", "_", "_", "_", "_", "_", "_", "_", "_"]
 def printBoard():
+    clear()
     print("_____________")
     print("|_%s_|_%s_|_%s_|" % (board[0], board[1], board[2]))
     print("|_%s_|_%s_|_%s_|" % (board[3], board[4], board[5]))
@@ -31,8 +35,10 @@ while stillPlaying == "y":
         printBoard()
     elif move == "":
         print("Invalid Move.")
-    elif move == "help" or "?":
+    elif move == "help":
         print("Commands are:\n\n\"r\" to reset board\nAny number 1 to 9 to choose where to put your piece.\n\"?\" or \"help\" to bring up the help menu.")
+    elif move == "?":
+        print("Commands are:\n\n\"r\" to reset board\nAny number 1 to 9 to choose where to put you piece.\n\"?\" or \"help\" to bring up the help menu.")
     elif int(move) > 9:
         print("Invalid Move.")
     elif int(move) < 1:

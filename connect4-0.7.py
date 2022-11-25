@@ -1,10 +1,11 @@
-slot0 = ["_", "_", "_", "_", "_", "_"]
-slot1 = ["_", "_", "_", "_", "_", "_"]
-slot2 = ["_", "_", "_", "_", "_", "_"]
-slot3 = ["_", "_", "_", "_", "_", "_"]
-slot4 = ["_", "_", "_", "_", "_", "_"]
-slot5 = ["_", "_", "_", "_", "_", "_"]
-slot6 = ["_", "_", "_", "_", "_", "_"]
+import simple_colors
+slot0 = ["__", "__", "__", "__", "__", "__"]
+slot1 = ["__", "__", "__", "__", "__", "__"]
+slot2 = ["__", "__", "__", "__", "__", "__"]
+slot3 = ["__", "__", "__", "__", "__", "__"]
+slot4 = ["__", "__", "__", "__", "__", "__"]
+slot5 = ["__", "__", "__", "__", "__", "__"]
+slot6 = ["__", "__", "__", "__", "__", "__"]
 slot0Indexing = 0
 slot1Indexing = 0
 slot2Indexing = 0
@@ -13,7 +14,7 @@ slot4Indexing = 0
 slot5Indexing = 0
 slot6Indexing = 0
 moveIsInt = 1
-moveIs = "X"
+moveIs = "🔵"
 isFull = [" ", " ", " ", " ", " ", " ", " "]
 def printBoard():
     print("|_%s_|_%s_|_%s_|_%s_|_%s_|_%s_|_%s_|" % (slot0[5], slot1[5], slot2[5], slot3[5], slot4[5], slot5[5], slot6[5]))
@@ -28,29 +29,29 @@ printBoard()
 
 while True:
     if (moveIsInt%2) == 0:
-        moveIs = "O"
+        moveIs = "🔴"
     elif (moveIsInt%2) != 0:
-        moveIs = "X"
+        moveIs = "🔵"
     if slot0Indexing > 5:
-        isFull[0] = "F"
+        isFull[0] = "FL"
         printBoard()
     if slot1Indexing > 5:
-        isFull[1] = "F"
+        isFull[1] = "FL"
         printBoard()
     if slot2Indexing > 5:
-        isFull[2] = "F"
+        isFull[2] = "FL"
         printBoard()
     if slot3Indexing > 5:
-        isFull[3] = "F"
+        isFull[3] = "FL"
         printBoard()
     if slot4Indexing > 5:
-        isFull[4] = "F"
+        isFull[4] = "FL"
         printBoard()
     if slot5Indexing > 5:
-        isFull[5] = "F"
+        isFull[5] = "FL"
         printBoard()
     if slot6Indexing > 5:
-        isFull[6] = "F"
+        isFull[6] = "FL"
         printBoard()
     if slot0Indexing == 6:              # Check if the board is full and 
         if slot0Indexing == slot1Indexing == slot2Indexing == slot3Indexing == slot4Indexing == slot5Indexing == slot6Indexing:
@@ -67,37 +68,37 @@ while True:
 
 
     if int(move) == 1:                  # Checks the move and puts the piece in the proper location
-        if slot0[slot0Indexing] == "_":
+        if slot0[slot0Indexing] == "__":
             slot0[slot0Indexing] = moveIs
             slot0Indexing += 1
             printBoard()
     elif int(move) == 2:
-        if slot1[slot1Indexing] == "_":
+        if slot1[slot1Indexing] == "__":
             slot1[slot1Indexing] = moveIs
             slot1Indexing += 1
             printBoard()
     elif int(move) == 3:
-        if slot2[slot2Indexing] == "_":
+        if slot2[slot2Indexing] == "__":
             slot2[slot2Indexing] = moveIs
             slot2Indexing += 1
             printBoard()
     elif int(move) == 4:
-        if slot3[slot3Indexing] == "_":
+        if slot3[slot3Indexing] == "__":
             slot3[slot3Indexing] = moveIs
             slot3Indexing += 1
             printBoard()
     elif int(move) == 5:
-        if slot4[slot4Indexing] == "_":
+        if slot4[slot4Indexing] == "__":
             slot4[slot4Indexing] = moveIs
             slot4Indexing += 1
             printBoard()
     elif int(move) == 6:
-        if slot5[slot5Indexing] == "_":
+        if slot5[slot5Indexing] == "__":
             slot5[slot5Indexing] = moveIs
             slot5Indexing += 1
             printBoard()
     elif int(move) == 7:
-        if slot6[slot6Indexing] == "_":
+        if slot6[slot6Indexing] == "__":
             slot6[slot6Indexing] = moveIs
             slot6Indexing += 1
             printBoard()
