@@ -1,3 +1,6 @@
+import os
+def clear():
+    os.system('cls')
 stillPlaying = "y"
 head = " "
 leftArm = " "
@@ -15,6 +18,7 @@ letter = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
 correctLetters = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 wrongLetters = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 def printHangMan():
+    clear()
     print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrong Letters:       /¯¯¯¯¯¯\\")
     print(" %s %s %s %s             |      |" % (wrongLetters[0], wrongLetters[1], wrongLetters[2], wrongLetters[3]))
     print(" %s %s %s %s             %s      |" % (wrongLetters[4], wrongLetters[5], wrongLetters[6], wrongLetters[7], head))
