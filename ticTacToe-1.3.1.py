@@ -3,7 +3,7 @@ import platform
 clearValue = ""
 if platform.system == "Windows":
     clearValue = 'cls'
-else:
+elif platform.system == "Darwin":
     clearValue = 'clear'
 
 

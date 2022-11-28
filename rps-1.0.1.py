@@ -1,6 +1,6 @@
 import random
-stillPlaying = "Y"
-while stillPlaying == "Y":
+stillPlaying = "y"
+while stillPlaying == "y":
     user_action =  input("Choose (Rock, Paper, Scissors): ").lower()
     actions = ["Rock", "Paper", "Scissors"]
     computer_action = random.choice(actions)
@@ -22,4 +22,4 @@ while stillPlaying == "Y":
             print("You won! %s beats %s." % (user_action, computer_action))
         elif computer_action == "Rock":
             print("You lost! %s beats %s." % (computer_action, user_action))
-    stillPlaying = input("\nPlay Again? (Y or N): ")
+    stillPlaying = input("\nPlay Again? (y/n): ")

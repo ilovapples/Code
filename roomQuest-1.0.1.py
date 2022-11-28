@@ -547,7 +547,7 @@ while True:
         elif currentRoom == "bedroom1":
             printBuildingCompact()
             print("You can't move up.")
-        elif currentRoom == "mainRoom":         # Moves up from main room to the long hall way
+        elif currentRoom == "mainRoom":         # Moves up from main room to the long hallway
             entrance = "   "
             bedRoom1 = "   "
             kitchen = "   "
