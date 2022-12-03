@@ -1,0 +1,2 @@
+from generate import password
+print("\n" + password(input("Special Characters? (true or false): "), input("Capitalized? (up for uppercase, low for lowercase, false to not modify case): "), int(input("Password Length: "))) + "\n")
