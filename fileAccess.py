@@ -16,4 +16,5 @@ def read(filename):
 def append(filename, text):
     with open(filename, "a") as fileObj:
         fileObj.write(text)
-accessFile(input("Filename: "), input("Text input for Write or Append (input doesn't matter if reading): "), input("Read, Write, or Append: "))
+while True:
+    accessFile(input("Filename: "), input("Text input for Write or Append (input doesn't matter if reading): "), input("Read, Write, or Append: "))

@@ -14,10 +14,11 @@ def rgb2hex(r, g, b):
         blue = '0' + blue1[2]
     else:
         blue = blue1[2] + blue1[3]
-    return "#" + red + green + blue
+    print("#" + red + green + blue)
+    print("Color: ")
 converting = "y"
 while converting == "y":
-    print("\n\n" + rgb2hex(int(input("Red: ")), int(input("Green: ")), int(input("Blue: "))))
+    rgb2hex(int(input("Red: ")), int(input("Green: ")), int(input("Blue: ")))
     converting = input("\nAgain?: ")
     if converting == "n":
         quit()
