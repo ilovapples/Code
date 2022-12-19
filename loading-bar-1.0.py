@@ -25,7 +25,7 @@ except ModuleNotFoundError:
         print("Beginning download of %s." % dlc)
         
         # Define important variables.
-        timeS = int(seconds)
+        timeS = float(seconds)
         chrLen = int(length)
         lenSoFar = 0
         bar = " " * chrLen
@@ -89,7 +89,7 @@ else:
        
     def printBar(dlc, seconds, length, showTimeDifference):
         print(colored("Beginning download of ", 'blue') + colored(dlc, 'green') + colored(".", 'blue'))
-        timeS = int(seconds)
+        timeS = float(seconds)
         chrLen = int(length)
         lenSoFar = 0
         bar = " " * chrLen
@@ -125,4 +125,4 @@ on = "on"
 off = "off"
 
 # Sample run for the printBar() function.
-printBar("Minecraft", 5, 50, on)
+printBar("Minecraft", 0.5, 50, on)
