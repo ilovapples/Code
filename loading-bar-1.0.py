@@ -13,11 +13,11 @@ try:
 # Print without color if not able to find the correct modules.
 except ModuleNotFoundError:
     if platform.system() == "Windows":
-        clear = 'cls'
+        def clear():
+            os.system('cls')
     else:
-        clear = 'clear'
-    def clear():
-        os.system(clear)
+        def clear():
+            os.system('clear')
     # Define the print bar module.
     def printBar(dlc, seconds, length, showTimeDifference):
         
@@ -81,11 +81,11 @@ except ModuleNotFoundError:
 # Run the exact same thing as above but with color, if supported. (therefore it will not be commented.)
 else:
     if platform.system() == "Windows":
-        clear = 'cls'
+        def clear():
+            os.system('cls')
     else:
-        clear = 'clear'
-    def clear():
-        os.system(clear)
+        def clear():
+            os.system('clear')
        
     def printBar(dlc, seconds, length, showTimeDifference):
         print(colored("Beginning download of ", 'blue') + colored(dlc, 'green') + colored(".", 'blue'))
