@@ -6,13 +6,18 @@
 # -------------------------------------------------------------------------------------------------------------------
 
 # Import time, os, from termcolor, colored.
-import time, os
+import time, os, platform
 try:
     from termcolor import colored
     
 # Print without color if not able to find the correct modules.
 except ModuleNotFoundError:
-    
+    if platform.system() == "Windows":
+        clear = 'cls'
+    else:
+        clear = 'clear'
+    def clear():
+        os.system(clear)
     # Define the print bar module.
     def printBar(dlc, seconds, length, showTimeDifference):
         
@@ -43,7 +48,7 @@ except ModuleNotFoundError:
             # Delay the bars updates.
             time.sleep(timeS/chrLen)
             # Clear screen.
-            os.system('cls')
+            clear()
             
             # Print the message saying that the 'download' has started.
             print("Beginning download of %s." % dlc)
@@ -92,7 +97,7 @@ else:
             # Delay the bars updates.
             time.sleep(timeS/chrLen)
             # Clear screen.
-            os.system('cls')
+            clear()
             print(colored("Beginning download of ", 'blue') + colored(dlc, 'green') + colored(".", 'blue'))
             # Print the bar.
             print("<" + bar + ">")
