@@ -74,7 +74,7 @@ except ModuleNotFoundError:
         print("Finished downloading %s in %s seconds."  % (dlc, str(elapsedTime)[:(str(elapsedTime).index(".")+3)]))
         # Check if the user wants to show the difference in elapsed time from the specified time.
         if showTimeDifference == "on":
-            print("There was a difference of %s seconds from the set amount of time, which was %s." % (setTimeDifference, timeS))
+            print("There was a difference of %s seconds from the set amount of time, which was %s seconds." % (setTimeDifference, timeS))
         quit()
         
         
