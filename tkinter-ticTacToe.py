@@ -2,6 +2,7 @@ from tkinter import *
 master = Tk()
 master.geometry("320x320")
 master.title("Tic Tac Toe")
+master.resizable(False, False)
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 xoro = "X"
