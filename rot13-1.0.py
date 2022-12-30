@@ -15,4 +15,3 @@ def encrypt(string):
                 encryptedString += firstHalfLetters[lastHalfLetters.index(string[selectedLetter])]
                 selectedLetter += 1
     return encryptedString
-print(encrypt(input("String to be encrypted: ")))
