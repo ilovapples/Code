@@ -38,10 +38,8 @@ def giveCard(house_or_not: bool, player: int, cardCount: int):
                 player_cards[player - 1].append([card, suite])
 def printHouseCards():
     cardTotal = 0
-    index = 0
-    for _ in range(len((house_cards))):
-        cardTotal += deck[house_cards[index][1]].index(house_cards[index][0]) + 1
-        index += 1
+    for i in range(len((house_cards))):
+        cardTotal += deck[house_cards[i][1]].index(house_cards[i][0]) + 1
     # Print the houses cards
     print("\n___________________")
     print("| House's Cards   |")
@@ -68,26 +66,23 @@ def printPlayerCards(player: int):
 def gameLoop():
     # Give cards to each player
     giveCard(True, 0, 2)
-    player_Count = int(input("How many people are playing? (Integer 1-10): "))
-    playerToBeGivenCards = 0
-    for _ in range(player_Count):
-        giveCard(False, playerToBeGivenCards, 2)
-        playerToBeGivenCards += 1
-        
+    player_Count = int(input("How many people are playing? (Including the house) (Integer 1-10): "))
+    for player in range(player_Count):
+        giveCard(False, player, 2)
+
     turn = 1
     currentPlayer = "the House"
-    totalPlayers = player_Count + 1
     # Start game loop
     while True:
-        if turn%totalPlayers == 1:
-            currentPlayer = "the House"
-        if turn%totalPlayers == 0:
-            currentPlayer = "Player " + str(totalPlayers)
-        else:
-            currentPlayer = "Player " + str(turn - 1)
+        # if turn%player_Count:
+        #     NOT DONE
+            
         
+        #BUG CATCHER: Makes sure the currentPlayer variable is never equal to "Player 0"
+        if currentPlayer == "Player 0":
+            currentPlayer = "the House"
         print("It's %s's turn." % currentPlayer)
-        move = input("Hit or Stand? (or help): ").lower()
+        move = input("Hit, Stand, or Show? (or help): ").lower()
         if move == "help":
             print("\nCommands are: \nhelp, to open this help menu\nshow, to show your cards and card total\n")
         elif move == "show":
@@ -102,6 +97,8 @@ def gameLoop():
                 giveCard(False, int(currentPlayer[-1]), 1)
         elif move == "stand":
             continue
-        
+        else:
+            print(f"\nInvalid move. You chose {move}, but {move} is not one of hit, stand, show, or help.\n")
+            turn -= 1    
         turn += 1
 gameLoop()
