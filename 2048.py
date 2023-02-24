@@ -1,6 +1,4 @@
 from termcolor import colored
-import os
-import time
 import random
 
 board = [
@@ -9,8 +7,7 @@ board = [
     [0, 0, 0, 0], 
     [0, 0, 0, 0], 
 ]
-
-background_color = 'on_blue'
+background_color = None
 text_color = 'white'
 
 
@@ -19,16 +16,28 @@ def numlen(num):
     
 
 def randomly_fill_board(spots: int=2):
-    coords = []
+    randcoords = []
     for i in range(spots):
-        coords.append([random.randint(0, 3), random.randint(0, 3)])
-        
-    nums = [
-        1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 4
-    ]
+        randcoords.append(
+            [
+                random.randint(0, 3),
+                random.randint(0, 3)
+            ]
+        )
     
-    for i in coords:
-        board[i[0]][i[1]] == random.choice(nums)
+    numbers = [2, 2, 2, 2, 4, 4]
+    
+    for coordpair in randcoords:
+        board[coordpair[0]][coordpair[1]] = random.choice(numbers)
+
+
+def zero_to_space():
+    final = []
+
+
+    
+    return final
+
 
 def print_board():
     printable = '___________________________________________\n|                                         |\n'
@@ -67,5 +76,5 @@ def print_board():
 
 
 print_board()
-randomly_fill_board(2)
+randomly_fill_board()
 print_board()
