@@ -1,0 +1,149 @@
+from getkey import getkey
+import os
+
+
+fileLocation = 'C:/Users/carar/Documents/terminal/'
+
+
+backslash = '\\'
+
+# ANSI Color Codes
+codes = {
+    'black_fore': '\033[30m',
+    'red_fore': '\033[31m',
+    'green_fore': '\033[32m',
+    'yellow_fore': '\033[33m',
+    'blue_fore': '\033[34m',
+    'magenta_fore': '\033[35m',
+    'cyan_fore': '\033[36m',
+    'white_fore': '\033[37m',
+    'bold': '\033[1m',
+    'italic': '\033[3m',
+    'underline': '\033[4m',
+    'strikethrough': '\033[9m',
+    'reset': '\033[0m'
+}
+
+# Console Commands
+commands = {
+    'mkdir': '''try: 
+    os.mkdir(cmd[6:])
+except:
+    print(f"Error: Directory \'{cmd[6:]}\' already exists.")''',
+    
+    'rmdir': '''for i in cmd[6:].split(" "):
+    os.system(f"rmdir /s {i}")''',
+    
+    'mkfile': '''try:
+    open(cmd[7:], "x")
+except:
+    print(f"Error: File \'{cmd[7:]}\' already exists.")''',
+    
+    'rmfile': '''for i in cmd[7:].split(" "):
+    os.system(f"del {i}")''',
+    
+    'cd': '''try:
+    if cmd.strip() == "cd":
+        os.chdir(filelocation + f"/data/{user}")
+    else:
+        os.chdir(cmd[3:])
+except:
+    print(f"Error: Directory \'{cmd[3:]}\' does not exist.")''',
+    
+    'writetofile': '''with open(cmd[12:], "w") as file:
+    final = ""
+    print()
+    while getkey() != "`":
+        final += getkey()
+    file.write(final)''',
+    
+    'ls': '''for i in os.listdir():
+    print(i)'''
+}
+
+
+
+loggedInUser = ''
+
+usersList = open("users.txt").read()
+
+
+def reset():
+    os.system('rmdir /s data')
+    os.mkdir('data')
+    with open("users.txt", 'w') as users:
+        users.write('')
+
+    
+def create_account(username, password):
+    open(fileLocation + "/users.txt", 'a').write(f'{username} {password}\n')
+    os.chdir(fileLocation + '/data')
+    try:
+        os.mkdir(username)
+    except:
+        print()
+    os.chdir('..')
+    
+
+def create_account_screen():
+    print(f"{codes['bold']}\nCreate Account Screen{codes['reset']}")
+    username = input("Username for New Account: ")
+    password = input("Password for New Account: ")
+    create_account(username, password)
+    print("You created a new account!")
+    login_screen()
+    
+    
+def login(username, password):
+    if username + " " in usersList:
+        usernamePos = usersList.index(username)
+        if usersList[usernamePos+len(username)+1:usersList.find("\n", usernamePos+len(username))] == password:
+            runterminal(username)
+            return 0
+        else:
+            return 1
+    else:
+        return 2
+    
+    
+def login_screen():
+    if usersList.strip() == '':
+        print("You don't have any users, so you are being directed to the account creation screen.")
+        create_account_screen()
+    else:
+        print("\nLog in to a user: ")
+        username = input("Username: ")
+        password = input("Password: ")
+        if login(username, password) == 0:
+            print(f"You are successfully logged in to the '{username}' account!")
+            runterminal(username)
+        elif login(username, password) == 1:
+            print("\nEither The username or password you inputed is incorrect.")
+            login_screen()
+        else:
+            print(f"The user '{username}' does not exist! Do you want to create an account? (Y/n): ")
+            while getkey().lower() != 'y' or getkey().lower() != 'n':
+                if getkey().lower() == 'y':
+                    create_account_screen()
+                elif getkey().lower() == 'n':
+                    login_screen()
+                
+
+def runterminal(user):
+    startdir = os.getcwd().replace(backslash, "/").replace(user, '~').split("/")
+    cmd = ''
+    os.chdir(fileLocation + f'data/{user}')
+    while cmd != 'logout': 
+        dir = (os.getcwd().replace(backslash, "/").replace(user, '~').split("/"))[len(startdir):]
+        usingdir = ""
+        for i in dir:
+            usingdir += i + '/'
+        usingdir = usingdir.replace('data/', '')
+        cmd = input(codes['blue_fore'] + f'{user}: {usingdir}$ ' + codes['reset'])
+        for i in commands:
+            if cmd.startswith(i):
+                exec(commands[i])
+    login_screen()
+    
+    
+login_screen()
