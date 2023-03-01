@@ -130,16 +130,16 @@ def login_screen():
                 
 
 def runterminal(user):
-    startdir = os.getcwd().replace(backslash, "/").replace(user, '~').split("/")
+    startdir = os.getcwd().replace(backslash, "/").replace(user, '~', 1).split("/")
     cmd = ''
     os.chdir(fileLocation + f'data/{user}')
     while cmd != 'logout': 
-        dir = (os.getcwd().replace(backslash, "/").replace(user, '~').split("/"))[len(startdir):]
+        dir = (os.getcwd().replace(backslash, "/").replace(user, '~', 1).split("/"))[len(startdir):]
         usingdir = ""
         for i in dir:
             usingdir += i + '/'
         usingdir = usingdir.replace('data/', '')
-        cmd = input(codes['blue_fore'] + f'{user}: {usingdir}$ ' + codes['reset'])
+        cmd = input(codes['blue_fore'] + f'{user}: {usingdir}{codes["reset"]}$ ')
         for i in commands:
             if cmd.startswith(i):
                 exec(commands[i])
