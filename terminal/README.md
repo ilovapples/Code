@@ -5,5 +5,18 @@ This is a sample of what interacting with the terminal could look like:
 
 ![example of terminal](readme-assets/example.png)
 
-
-Remember to change `fileLocation` variable to the path on your device that the python script is located in (not including the `terminal.py` part).
+### Change `fileLocation`
+Remember to change `fileLocation` variable to the path on your device that the python script is located in (not including the `terminal.py` part).  
+Ex:  
+```python
+fileLocation = 'C:/Users/<user>/Documents/Github/Code/terminal'
+```  
+if your `terminal.py` file is located in `'C:/Users/<user>/Documents/Github/Code/terminal'`.  
+  
+You can get the directory easily by downloading the `Code` repository, going into the `terminal` folder, clicking on the title bar and copying the path at the top. Then paste it onto the line:
+```python
+fileLocation = 
+``` 
+and then add single or double quotes around it and replace the backslashes (`\`) with forward slashes (`/`)  
+  
+### The program **_WILL NOT_** work properly without the `fileLocation` variable being set properly.
