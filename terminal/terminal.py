@@ -2,7 +2,7 @@ from getkey import getkey
 import os
 
 
-fileLocation = 'C:/Users/carar/Documents/terminal/'
+fileLocation = os.getcwd().replace("\\", '/')
 
 
 backslash = '\\'
