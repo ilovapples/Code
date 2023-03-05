@@ -1,8 +1,8 @@
-from getkey import getkey
 import os
 
+from getkey import getkey
 
-fileLocation = os.getcwd().replace("\\", '/')
+fileLocation = 'C:/Users/<user>/Documents/Github/Code/terminal'
 
 
 backslash = '\\'
@@ -58,7 +58,26 @@ except:
     file.write(final)''',
     
     'ls': '''for i in os.listdir():
-    print(i)'''
+    print(i)''',
+    
+    'read': '''try:
+    print(open(cmd[5:]).read())
+except:
+    print(f"Error: File \'{cmd[5:]}\' does not exist.")''',
+    
+    'deluser': '''if cmd.strip() == "deluser":
+    username = input("Username: ")
+else:
+    username = cmd[8:]
+userpassword = input("Password: ")
+if check_login(username, userpassword) == 0:
+    os.system(f"rmdir /s {username})
+    print(f"User \'{username}\' deleted.")
+elif check_login(username, userpassword) == 1:
+    print("The username or password is incorrect.")
+else:
+    print("That user doesn't exist.")
+'''
 }
 
 
@@ -76,13 +95,16 @@ def reset():
 
     
 def create_account(username, password):
-    open(fileLocation + "/users.txt", 'a').write(f'{username} {password}\n')
-    os.chdir(fileLocation + '/data')
-    try:
-        os.mkdir(username)
-    except:
-        print()
-    os.chdir('..')
+    if f'{username} {password}' not in open(fileLocation + "/users.txt").read():
+        open(fileLocation + "/users.txt", 'a').write(f'{username} {password}\n')
+        os.chdir(fileLocation + '/data')
+        try:
+            os.mkdir(username)
+        except:
+            print()
+        os.chdir('..')
+    else:
+        print("That account already exists.")
     
 
 def create_account_screen():
@@ -127,12 +149,12 @@ def login_screen():
                     create_account_screen()
                 elif getkey().lower() == 'n':
                     login_screen()
-                
+
 
 def runterminal(user):
     startdir = os.getcwd().replace(backslash, "/").replace(user, '~', 1).split("/")
     cmd = ''
-    os.chdir(fileLocation + f'data/{user}')
+    os.chdir(fileLocation + f'/data/{user}')
     while cmd != 'logout': 
         dir = (os.getcwd().replace(backslash, "/").replace(user, '~', 1).split("/"))[len(startdir):]
         usingdir = ""
@@ -144,6 +166,6 @@ def runterminal(user):
             if cmd.startswith(i):
                 exec(commands[i])
     login_screen()
-    
-    
+
+
 login_screen()
