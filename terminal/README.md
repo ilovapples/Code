@@ -14,5 +14,8 @@ C:/Users/test/Documents/Github/Code/terminal
 if your `terminal.py` file is located in `'C:/Users/test/Documents/Github/Code/terminal'`.  
   
 You can get the directory easily by downloading the `Code` repository, going into the `terminal` folder, clicking on the title bar and copying the path at the top. Then paste it into the `dir.txt` file
+
+Make sure you replace all backslashes ( \ ) with forward slashes ( / ).
   
-### The program **_WILL NOT_** work properly without the `fileLocation` variable being set properly.
+### The program **_WILL NOT_** work properly without the `dir.txt` file being set properly.
+(Also it will not run the program without the dir.txt being changed from the default.)
