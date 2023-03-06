@@ -96,18 +96,10 @@ else:
         'stop': '''quit()'''
     }
 
-
-
-    loggedInUser = ''
-
+    
     usersList = open("users.txt").read()
 
 
-    def reset():
-        os.system('rmdir /s data')
-        os.mkdir('data')
-        with open("users.txt", 'w') as users:
-            users.write('')
 
         
     def create_account(username, password):
