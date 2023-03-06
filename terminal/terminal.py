@@ -133,15 +133,21 @@ else:
         
         
     def login(username, password):
-        if username + " " in open("users.txt").read().strip():
-            usernamePos = open("users.txt").read().strip().index(username)
-            if open("users.txt").read().strip()[usernamePos+len(username)+1:open("users.txt").read().strip().find("\n", usernamePos+len(username))] == password:
-                runterminal(username)
-                return 0
-            else:
-                return 1
-        else:
-            return 2
+        with open("users.txt", "r").read().strip() as userlist:
+            userPasswordList = [i.split(' ') for i in userlist.split('\n')]
+            
+            for pair in userPasswordList:
+                if username in pair:
+                    if password == pair[1]:
+                        # return status code 0 if password is correct and user exists (successful login)
+                        return 0
+                    else:
+                        # return status code 1 if password is incorrect
+                        return 1
+                    
+                else:
+                    # return status code 2 if user does not exist
+                    return 2
         
         
     def login_screen():
