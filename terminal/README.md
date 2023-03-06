@@ -11,7 +11,7 @@ Ex:
 ```
 C:/Users/test/Documents/Github/Code/terminal
 ```  
-if your `terminal.py` file is located in `'C:/Users/test/Documents/Github/Code/terminal'`.  
+if your `terminal.py` file is located in `C:/Users/test/Documents/Github/Code/terminal`.  
   
 You can get the directory easily by downloading the `Code` repository, going into the `terminal` folder, clicking on the title bar and copying the path at the top. Then paste it into the `dir.txt` file
 
