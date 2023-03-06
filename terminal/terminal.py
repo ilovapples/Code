@@ -1,5 +1,5 @@
 import os
-from platform import system as os
+from platform import system as getos
 
 from getkey import getkey
 
@@ -7,7 +7,7 @@ from getkey import getkey
 
 fileLocation = open('dir.txt').read()
 if fileLocation == 'C:/Users/<user>/Documents/Github/Code/terminal':
-    print("You need to set the file directory. Set it to the folder your 'terminal.py' file is in.\n\nExample (if your username was test):\nC:/Users/test/Documents/Github/Code/terminal")
+    print("You need to set the file directory. Set it to the folder your 'terminal.py' file is in.\n\nExample (if your username was test):\nC:/Users/test/Documents/Github/Code/terminal\n")
 else:
 
     backslash = '\\'
@@ -32,65 +32,68 @@ else:
     # Console Commands
     commands = {
         'mkdir': '''try: 
-        os.mkdir(cmd[6:])
-    except:
-        print(f"Error: Directory \'{cmd[6:]}\' already exists.")''',
+    os.mkdir(cmd[6:])
+except:
+    print(f"Error: Directory \'{cmd[6:]}\' already exists.")''',
         
         'rmdir': '''for i in cmd[6:].split(" "):
-        os.system(f"rmdir /s {i}")''',
+    os.system(f"rmdir /s {i}")''',
         
         'mkfile': '''try:
-        open(cmd[7:], "x")
-    except:
-        print(f"Error: File \'{cmd[7:]}\' already exists.")''',
+    open(cmd[7:], "x")
+except:
+    print(f"Error: File \'{cmd[7:]}\' already exists.")''',
         
-        'rmfile': '''if os() == "Windows":
-        for i in cmd[7:].split(" "):
-            os.system(f"del {i}")
-    elif os() == "Linux":
-        for i in cmd[7:].split(" "):
-            os.system(f"rm {i}")''',
+        'rmfile': '''if getos() == "Windows":
+    for i in cmd[7:].split(" "):
+        os.system(f"del {i}")
+elif getos() == "Linux":
+    for i in cmd[7:].split(" "):
+        os.system(f"rm {i}")''',
         
         'cd': '''try:
-        if cmd.strip() == "cd":
-            os.chdir(filelocation + f"/data/{user}")
-        else:
-            os.chdir(cmd[3:])
-    except:
-        print(f"Error: Directory \'{cmd[3:]}\' does not exist.")''',
-        
+    if cmd.strip() == "cd":
+        os.chdir(filelocation + f"/data/{user}")
+    else:
+        os.chdir(cmd[3:])
+except:
+    print(f"Error: Directory \'{cmd[3:]}\' does not exist.")''',
+    
         'writetofile': '''with open(cmd[12:], "w") as file:
-        final = ""
-        print()
-        while getkey() != "`":
-            final += getkey()
-        file.write(final)''',
+    final = ""
+    print()
+    while getkey() != "`":
+        final += getkey()
+    file.write(final)''',
         
         'ls': '''for i in os.listdir():
-        print(i)''',
+    print(i)''',
         
         'read': '''try:
-        print(open(cmd[5:]).read())
-    except:
-        print(f"Error: File \'{cmd[5:]}\' does not exist.")''',
+    print(open(cmd[5:]).read())
+except:
+    print(f"Error: File \'{cmd[5:]}\' does not exist.")''',
         
         'deluser': '''if cmd.strip() == "deluser":
-        username = input("Username: ")
-    else:
-        username = cmd[8:]
-    userpassword = input("Password: ")
-    if check_login(username, userpassword) == 0:
-        os.system(f"rmdir /s {username})
-        print(f"User \'{username}\' deleted.")
-    elif check_login(username, userpassword) == 1:
-        print("The username or password is incorrect.")
-    else:
-        print("That user doesn't exist.")
-    ''',
-        'clear': '''if os() == "Windows":
-        os.system("cls")
-    else:
-        os.system("clear")'''
+    username = input("Username: ")
+else:
+    username = cmd[8:]
+userpassword = input("Password: ")
+if check_login(username, userpassword) == 0:
+    os.system(f"rmdir /s {username})
+    print(f"User \'{username}\' deleted.")
+elif check_login(username, userpassword) == 1:
+    print("The username or password is incorrect.")
+else:
+    print("That user doesn't exist.")
+        ''',
+    
+        'clear': '''if getos() == "Windows":
+    os.system("cls")
+else:
+    os.system("clear")''',
+    
+        'stop': '''quit()'''
     }
 
 
@@ -130,9 +133,9 @@ else:
         
         
     def login(username, password):
-        if username + " " in usersList:
-            usernamePos = usersList.index(username)
-            if usersList[usernamePos+len(username)+1:usersList.find("\n", usernamePos+len(username))] == password:
+        if username + " " in open("users.txt").read().strip():
+            usernamePos = open("users.txt").read().strip().index(username)
+            if open("users.txt").read().strip()[usernamePos+len(username)+1:open("users.txt").read().strip().find("\n", usernamePos+len(username))] == password:
                 runterminal(username)
                 return 0
             else:
@@ -143,7 +146,7 @@ else:
         
     def login_screen():
         if open("users.txt").read().strip() == '':
-            print("You don't have any users, so you are being directed to the account creation screen.")
+            print("You don't have any users, so you are being directed to the account creation screen. (After creating account, you have to restart the program for it to )")
             create_account_screen()
         else:
             print("\nLog in to a user: ")
