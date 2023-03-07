@@ -1,4 +1,6 @@
 # Import customGrid module.
+# Requires customGrid.py file. 
+# WILL NOT WORK WITHOUT 'customGrid.py' FILE
 import customGrid as cg
 
 # Define printBoard() function to print the board.
