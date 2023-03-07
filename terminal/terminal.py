@@ -125,8 +125,8 @@ else:
         
         
     def login(username, password):
-        with open("users.txt", "r").read().strip() as userlist:
-            userPasswordList = [i.split(' ') for i in userlist.split('\n')]
+        with open("users.txt", "r") as userlist:
+            userPasswordList = [i.split(' ') for i in userlist.read().strip().split('\n')]
             
             for pair in userPasswordList:
                 if username in pair:
@@ -144,7 +144,7 @@ else:
         
     def login_screen():
         if open("users.txt").read().strip() == '':
-            print("You don't have any users, so you are being directed to the account creation screen. (After creating account, you have to restart the program for it to )")
+            print("You don't currently have any accounts, so you are being redirected to the account creation screen.")
             create_account_screen()
         else:
             print("\nLog in to a user: ")
@@ -181,5 +181,5 @@ else:
                     exec(commands[i])
         login_screen()
 
-
-    login_screen()
+    if __name__ == '__main__':
+        login_screen()
