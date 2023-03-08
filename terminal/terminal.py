@@ -5,7 +5,7 @@ from getkey import getkey
 
 
 
-fileLocation = open('dir.txt').read()
+fileLocation = open('dir.txt').read().replace('\n', '').strip()
 if fileLocation == 'C:/Users/<user>/Documents/Github/Code/terminal':
     print("You need to set the file directory. Set it to the folder your 'terminal.py' file is in.\n\nExample (if your username was test):\nC:/Users/test/Documents/Github/Code/terminal\n")
 else:
