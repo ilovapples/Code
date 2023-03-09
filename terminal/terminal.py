@@ -105,6 +105,8 @@ else:
     os.system("cls")
 else:
     os.system("clear")''',
+        'py': '''if cmd[3:] in os.listdir():
+    os.system(f"python3 {cmd[3:]}")''',
     
         'stop': '''quit()'''
     }
