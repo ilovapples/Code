@@ -99,7 +99,7 @@ else:
     }
 
     
-    usersList = open("users.txt").read()
+    usersList = open(fileLocation + "/users.txt").read()
 
 
 
@@ -127,7 +127,7 @@ else:
         
         
     def login(username, password):
-        with open("users.txt", "r") as userlist:
+        with open(fileLocation + "/users.txt", "r") as userlist:
             userPasswordList = [i.split(' ') for i in userlist.read().strip().split('\n')]
             
             for pair in userPasswordList:
@@ -145,7 +145,7 @@ else:
         
         
     def login_screen():
-        if open("users.txt").read().strip() == '':
+        if open(fileLocation + "users.txt").read().strip() == '':
             print("You don't currently have any accounts, so you are being redirected to the account creation screen.")
             create_account_screen()
         else:
