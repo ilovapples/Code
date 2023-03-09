@@ -67,7 +67,8 @@ except:
     line = ""
     while line != "#:exit":
         line = input("")
-        final += line + "\n"''',
+        final += line + "\n"
+        ''',
         
         'ls -a': '''for i in os.listdir():
     print(i)''',
