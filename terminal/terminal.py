@@ -64,10 +64,10 @@ except:
     
         'writetofile': '''with open(cmd[12:], "w") as file:
     final = ""
-    print()
-    while getkey() != "`":
-        final += getkey()
-    file.write(final)''',
+    line = ""
+    while line != "#:exit":
+        line = input("")
+        final += line + "\n"''',
         
         'ls -a': '''for i in os.listdir():
     print(i)''',
