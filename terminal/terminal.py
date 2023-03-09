@@ -65,7 +65,7 @@ except:
         'writetofile': '''with open(cmd[12:], "w") as file:
     final = ""
     line = ""
-    while line != "#:exit":
+    while line != "!:exit":
         line = input("")
         final += line + "\n"
         ''',
