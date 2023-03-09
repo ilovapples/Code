@@ -37,7 +37,10 @@ except:
     print(f"Error: Directory \'{cmd[6:]}\' already exists.")''',
         
         'rmdir': '''for i in cmd[6:].split(" "):
-    os.system(f"rmdir /s {i}")''',
+    if getos() == "Windows":
+        os.system(f"rmdir /s {i}"),
+    else:
+        os.system(f"rmdir {i}")'''
         
         'mkfile': '''try:
     open(cmd[7:], "x")
