@@ -62,7 +62,7 @@ elif getos() == "Linux":
 except:
     print(f"Error: Directory \'{cmd[3:]}\' does not exist.")''',
     
-        'writetofile': """with open(cmd[12:], "w") as file:
+        'writetofile': """with open(cmd[12:], 'w') as file:
     final = ''
     line = ''
     while line != '!:exit':
