@@ -68,7 +68,8 @@ except:
         line = ''
         while line != '!:exit':
             line = input('')
-            final += line + '\\n'
+            if line != '!:exit':
+                final += line + '\\n'
         file.write(final)
 else:
     print(f'Error: File \\'{cmd[12:]}\\' does not exist.')
