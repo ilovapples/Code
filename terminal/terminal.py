@@ -66,11 +66,13 @@ except:
         final += getkey()
     file.write(final)''',
         
+        'ls -a': '''for i in os.listdir():
+    print(i)''',
+        
         'ls': '''for i in os.listdir():
     if not i.startswith("."):
         print(i)''',
-        'ls -a': '''for i in os.listdir():
-    print(i)''',
+        
         'read': '''try:
     print(open(cmd[5:]).read())
 except:
@@ -181,6 +183,7 @@ else:
             for i in commands:
                 if cmd.startswith(i):
                     exec(commands[i])
+                
         login_screen()
 
     if __name__ == '__main__':
