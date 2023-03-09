@@ -69,7 +69,7 @@ except:
         line = input('')
         final += line + '\n'
     file.write(final)
-        ''',
+        """,
         
         'ls -a': '''for i in os.listdir():
     print(i)''',
