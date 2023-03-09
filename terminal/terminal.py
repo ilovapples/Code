@@ -40,7 +40,7 @@ except:
     if getos() == "Windows":
         os.system(f"rmdir /s {i}"),
     else:
-        os.system(f"rmdir {i}")'''
+        os.system(f"rmdir {i}")''',
         
         'mkfile': '''try:
     open(cmd[7:], "x")
