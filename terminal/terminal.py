@@ -145,7 +145,7 @@ else:
         
         
     def login_screen():
-        if open(fileLocation + "users.txt").read().strip() == '':
+        if open(fileLocation + "/users.txt").read().strip() == '':
             print("You don't currently have any accounts, so you are being redirected to the account creation screen.")
             create_account_screen()
         else:
