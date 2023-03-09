@@ -106,7 +106,9 @@ else:
 else:
     os.system("clear")''',
         'py': '''if cmd[3:] in os.listdir():
-    os.system(f"python3 {cmd[3:]}")''',
+    os.system(f"python3 {cmd[3:]}")
+else:
+    print(f"Error: File \\'{cmd[3:]}\\' does not exist.")''',
     
         'stop': '''quit()'''
     }
