@@ -1,6 +1,5 @@
 import os
 from platform import system as getos
-
 from getkey import getkey
 
 
