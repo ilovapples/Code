@@ -7,7 +7,18 @@ from getkey import getkey
 
 fileLocation = open('dir.txt').read().replace('\n', '').strip()
 if fileLocation == 'default':
-    print("You need to set the file directory. If you are on Windows, run the 'set_dir.bat' file. If you are on Linux or Mac, run 'bash set_dir.sh' in this location in the terminal.")
+    if getos() == 'Windows':
+        print("Setting base directory...\n")
+        os.system('set_dir.bat')
+        print("The program will now restart to continue.\n")
+        os.system('python3 terminal.py')
+        quit()
+    else:
+        print("Setting base directory...\n")
+        os.system('bash set_dir.sh')
+        print("The program will now restart to continue.\n")
+        os.system('python3 terminal.py')
+        quit()
 else:
 
     backslash = '\\'
@@ -93,7 +104,10 @@ else:
     username = cmd[8:]
 userpassword = input("Password: ")
 if check_login(username, userpassword) == 0:
-    os.system(f"rmdir /s {username})
+    if getos() == "Windows":
+        os.system(f"rmdir /s {username}")
+    else:
+        os.system(f"rm -r {username}")
     print(f"User \'{username}\' deleted.")
 elif check_login(username, userpassword) == 1:
     print("The username or password is incorrect.")
@@ -146,7 +160,7 @@ else:
             userPasswordList = [i.split(' ') for i in userlist.read().strip().split('\n')]
             
             for pair in userPasswordList:
-                if username in pair:
+                if username == pair[0]:
                     if password == pair[1]:
                         # return status code 0 if password is correct and user exists (successful login)
                         return 0
