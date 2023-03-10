@@ -7,7 +7,13 @@ from getkey import getkey
 
 fileLocation = open('dir.txt').read().replace('\n', '').strip()
 if fileLocation == 'default':
-    print("You need to set the file directory. If you are on Windows, run the 'set_dir.bat' file. If you are on Linux or Mac, run 'bash set_dir.sh' in this location in the terminal.")
+    try:
+        if getos() == 'Windows':
+            os.system('set_dir.bat')
+        else:
+            os.system('bash set_dir.sh')
+    except:
+        print("You need to set the file directory. If you are on Windows, run the 'set_dir.bat' file. If you are on Linux or Mac, run 'bash set_dir.sh' in this location in the terminal.")
 else:
 
     backslash = '\\'
