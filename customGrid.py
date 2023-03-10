@@ -1,7 +1,7 @@
-def generate(cols, rows):
-    customBoard = []
+def generate(cols: int, rows: int, fill=""):
+    grid = []
     for _ in range(rows):
-        customBoard.append([])
-        for _ in range(cols):
-            customBoard[-1].append("_")
-    return customBoard
+        grid.append([])
+        for i in range(cols):
+            grid[-1].append(fill)
+    return grid

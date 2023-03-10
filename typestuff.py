@@ -1,4 +1,4 @@
-from playsound import playsound
+# from playsound import playsound
 from pyautogui import typewrite
 from time import sleep
 def type(stuff):

@@ -1,9 +1,12 @@
 import os
-import platform
-clearFunc = ''
-if platform.system == "Windows":
+from platform import system as getos
+clearFunc = ""
+if getos() == "Windows":
     clearFunc = 'cls'
 else:
     clearFunc = 'clear'
+
+
 def clear():
     os.system(clearFunc)
+
