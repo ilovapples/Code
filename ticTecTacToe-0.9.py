@@ -1,15 +1,17 @@
 # Import customGrid module.
+# Requires customGrid.py file. 
+# WILL NOT WORK WITHOUT 'customGrid.py' FILE
 import customGrid as cg
 
 # Define printBoard() function to print the board.
-board = cg.generate(4, 4)
+board = cg.generate(4, 4, "_")
 def printBoard():
     print("_" * (1+4*4))
     boardPrint = ""
     for i in range(4):
         boardPrint += "|"
         for j in range(4):
-            boardPrint += "_%s_|" % (board[i][j])
+            boardPrint += f"_{board[i][j]_|"
         boardPrint += "\n"
     print(boardPrint)
     
@@ -89,7 +91,7 @@ while stillPlaying == "y":
             # Check (1, 4) to (4, 4).
             if board[0][0] == board[0][1] == board[0][2] == board[0][3] == wasXORO:
                 printBoard()
-                print("%s got 4 in a row!" % wasXORO)
+                print(f"{wasXORO} got 4 in a row!")
                 stillPlaying = input("\nPlay Again? (y/n): ")
                 if stillPlaying == "n":
                     quit()
@@ -101,7 +103,7 @@ while stillPlaying == "y":
             # Check (1, 3) to (4, 3).
             elif board[1][0] == board[1][1] == board[1][2] == board[1][3] == wasXORO:
                 printBoard()
-                print("%s got 4 in a row!" % wasXORO)
+                print(f"{wasXORO} got 4 in a row!")
                 stillPlaying = input("\nPlay Again? (y/n): ")
                 if stillPlaying == "n":
                     quit()
@@ -113,7 +115,7 @@ while stillPlaying == "y":
             # Check (1, 2) to (4, 2)
             elif board[2][0] == board[2][1] == board[2][2] == board[2][3] == wasXORO:
                 printBoard()
-                print("%s got 4 in a row!" % wasXORO)
+                print(f"{wasXORO} got 4 in a row!")
                 stillPlaying = input("\nPlay Again? (y/n): ")
                 if stillPlaying == "n":
                     quit()
@@ -125,7 +127,7 @@ while stillPlaying == "y":
             # Check (1, 1) to (4, 1)
             elif board[3][0] == board[3][1] == board[3][2] == board[3][3] == wasXORO:
                 printBoard()
-                print("%s got 4 in a row!" % wasXORO)
+                print(f"{wasXORO} got 4 in a row!")
                 stillPlaying = input("\nPlay Again? (y/n): ")
                 if stillPlaying == "n":
                     quit()

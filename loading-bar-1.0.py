@@ -6,10 +6,10 @@
 # -------------------------------------------------------------------------------------------------------------------
 
 # Import time, os, from termcolor, colored.
-import time, os, platform
+import time, os, platform, sys
 try:
     from termcolor import colored
-    
+
 # Print without color if not able to find the correct modules.
 except ModuleNotFoundError:
     if platform.system() == "Windows":
@@ -20,10 +20,10 @@ except ModuleNotFoundError:
             os.system('clear')
     # Define the print bar module.
     def printBar(dlc, seconds, length, showTimeDifference):
-        
+
         # Print the message saying that the 'download' has started.
         print("Beginning download of %s." % dlc)
-        
+
         # Define important variables.
         timeS = float(seconds)
         chrLen = int(length)
@@ -31,34 +31,34 @@ except ModuleNotFoundError:
         bar = " " * chrLen
         # Start the timer to time the 'download'.
         startTime = time.time()
-        
+
         # Start the loop for the bar to fill.
         for _ in range(chrLen+1):
-            
+
             # Assign the bar a value.
             bar = "-" * lenSoFar + ">" + "-" * (chrLen - lenSoFar-1)
-            
+
             # Check if bar is full.
             if lenSoFar == chrLen:
                 bar = "-" * chrLen
                 endTime = time.time()
-                
+
             # Increase the current length value.
             lenSoFar += 1
             # Delay the bars updates.
             time.sleep(timeS/chrLen)
             # Clear screen.
             clear()
-            
+
             # Print the message saying that the 'download' has started.
             print("Beginning download of %s." % dlc)
-            
+
             # Print the bar.
             print("<" + bar + ">")
-        
+
         # Set the variable for how long it took for the 'download' to finish.
         elapsedTime = endTime - startTime
-        
+
         # Check if the user wants to show the difference in elapsed time from the specified time, since it is run by a computer, therefore the calculations take time and the difference may be larger or smaller based on the power of the computer running the program.
         if showTimeDifference == "on":
             # Check if the elapsed time is larger than the specified time.
@@ -76,8 +76,8 @@ except ModuleNotFoundError:
         if showTimeDifference == "on":
             print("There was a difference of %s seconds from the set amount of time, which was %s seconds." % (setTimeDifference, timeS))
         quit()
-        
-        
+
+
 # Run the exact same thing as above but with color, if supported. (therefore it will not be commented.)
 else:
     if platform.system() == "Windows":
@@ -86,7 +86,7 @@ else:
     else:
         def clear():
             os.system('clear')
-       
+
     def printBar(dlc, seconds, length, showTimeDifference):
         print(colored("Beginning download of ", 'blue') + colored(dlc, 'green') + colored(".", 'blue'))
         timeS = float(seconds)
@@ -124,5 +124,12 @@ else:
 on = "on"
 off = "off"
 
-# Sample run for the printBar() function.
-printBar("Minecraft", 0.5, 50, on)
+if len(sys.argv) >= 5:
+    if sys.argv[4] == '-d':
+        printBar(sys.argv[1], float(sys.argv[2]), int(sys.argv[3]), on)
+    else:
+        printBar(sys.argv[1], float(sys.argv[2]), int(sys.argv[3]), off)
+elif len(sys.argv) >= 4:
+    printBar(sys.argv[1], float(sys.argv[2]), int(sys.argv[3]), off)
+else:
+    print("Too few arguments!")
