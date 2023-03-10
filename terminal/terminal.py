@@ -9,13 +9,15 @@ fileLocation = open('dir.txt').read().replace('\n', '').strip()
 if fileLocation == 'default':
     try:
         if getos() == 'Windows':
+            print("Setting base directory...\n")
             os.system('set_dir.bat')
-            print("The program will now restart to continue.")
+            print("The program will now restart to continue.\n")
             os.system('python3 terminal.py')
             quit()
         else:
+            print("Setting base directory...\n")
             os.system('bash set_dir.sh')
-            print("The program will now restart to continue.")
+            print("The program will now restart to continue.\n")
             os.system('python3 terminal.py')
             quit()
     except:
