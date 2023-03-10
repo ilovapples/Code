@@ -10,10 +10,17 @@ if fileLocation == 'default':
     try:
         if getos() == 'Windows':
             os.system('set_dir.bat')
+            print("The program will now restart to continue.")
+            os.system('python3 terminal.py')
+            quit()
         else:
             os.system('bash set_dir.sh')
+            print("The program will now restart to continue.")
+            os.system('python3 terminal.py')
+            quit()
     except:
         print("You need to set the file directory. If you are on Windows, run the 'set_dir.bat' file. If you are on Linux or Mac, run 'bash set_dir.sh' in this location in the terminal.")
+        quit()
 else:
 
     backslash = '\\'
