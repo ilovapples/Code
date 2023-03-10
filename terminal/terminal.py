@@ -104,7 +104,10 @@ else:
     username = cmd[8:]
 userpassword = input("Password: ")
 if check_login(username, userpassword) == 0:
-    os.system(f"rmdir /s {username})
+    if getos() == "Windows":
+        os.system(f"rmdir /s {username}")
+    else:
+        os.system(f"rm -r {username}")
     print(f"User \'{username}\' deleted.")
 elif check_login(username, userpassword) == 1:
     print("The username or password is incorrect.")
