@@ -1,13 +1,13 @@
 import os
 from platform import system as getos
-
 from getkey import getkey
 
 
 
+
 fileLocation = open('dir.txt').read().replace('\n', '').strip()
-if fileLocation == 'C:/Users/<user>/Documents/Github/Code/terminal':
-    print("You need to set the file directory. Set it to the folder your 'terminal.py' file is in.\n\nExample (if your username was test):\nC:/Users/test/Documents/Github/Code/terminal\n")
+if fileLocation == 'default':
+    print("You need to set the file directory. If you are on Windows, run the 'set_dir.bat' file. If you are on Linux or Mac, run 'bash set_dir.sh' in this location in the terminal.")
 else:
 
     backslash = '\\'
@@ -183,6 +183,7 @@ else:
 
 
     def runterminal(user):
+
         startdir = os.getcwd().replace(backslash, "/").replace(user, '~', 1).split("/")
         cmd = ''
         os.chdir(fileLocation + f'/data/{user}')
@@ -192,12 +193,32 @@ else:
             for i in dir:
                 usingdir += i + '/'
             usingdir = usingdir.replace('data/', '')
-            cmd = input(codes['blue_fore'] + f'{user}: {usingdir}{codes["reset"]}$ ')
+            
+
+
+            # DEFINE TERMINAL PROMPT
+            prompt = codes['blue_fore'] + f'{user}: {usingdir}{codes["reset"]}$ '
+
+
+
+            cmd = input(prompt)
+            a_cmd = False
             for i in commands:
                 if cmd.startswith(i):
                     exec(commands[i])
-                
+                    a_cmd = True
+
+
+            if not a_cmd:
+                if ' ' in cmd:
+                    print(f"Error: Command '{cmd[:cmd.index(' ')]}' does not exist.")
+                else:
+                    print(f"Error: Command '{cmd}' does not exist.")
         login_screen()
 
     if __name__ == '__main__':
         login_screen()
+
+
+
+
