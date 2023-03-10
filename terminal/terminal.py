@@ -160,7 +160,7 @@ else:
             userPasswordList = [i.split(' ') for i in userlist.read().strip().split('\n')]
             
             for pair in userPasswordList:
-                if username in pair:
+                if username == pair[0]:
                     if password == pair[1]:
                         # return status code 0 if password is correct and user exists (successful login)
                         return 0
