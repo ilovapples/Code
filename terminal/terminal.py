@@ -37,7 +37,8 @@ else:
         'italic': '\033[3m',
         'underline': '\033[4m',
         'strikethrough': '\033[9m',
-        'reset': '\033[0m'
+        'reset': '\033[0m',
+        'blue_bold': '\033[34;1m',
     }
 
     # Console Commands
@@ -87,11 +88,17 @@ else:
         """,
         
         'ls -a': '''for i in os.listdir():
-    print(i)''',
+    if os.path.isdir(i):
+        print(codes['blue_bold'] + i + codes['reset'])
+    else:
+        print(i)''',
         
         'ls': '''for i in os.listdir():
     if not i.startswith("."):
-        print(i)''',
+        if os.path.isdir(i):
+            print(codes['blue_bold'] + i + codes['reset'])
+        else:
+            print(i)''',
         
         'read': '''try:
     print(open(cmd[5:]).read())
