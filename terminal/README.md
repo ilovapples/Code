@@ -1,10 +1,6 @@
 # Terminal
 Terminal allows you to log into seperate accounts and access seperate files and use around seven different console commands.
 
-This is a sample of what interacting with the terminal could look like:
-
-![example of terminal](https://raw.githubusercontent.com/ilovapples/Code/main/readme-assets/terminal-example.PNG)
-
 ## Update (March 10th, 2023):
 ### At this point in time, the `terminal.py` script has been set to automatically run the scripts to get the directory, so unless you want to, all of the below information is technically useless. Just thought I'd tell you before you wasted time reading it, like I wasted time writing it.
 
