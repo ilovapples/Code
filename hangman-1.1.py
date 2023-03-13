@@ -1,6 +1,11 @@
 import os
-def clear():
-    os.system('cls')
+from platform import system as getos
+if getos() == 'Windows':
+    def clear():
+        os.system('cls')
+else:
+    def clear():
+        os.system('clear')
 stillPlaying = "y"
 head = " "
 leftArm = " "
