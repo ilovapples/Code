@@ -228,6 +228,7 @@ else:
                 if cmd.startswith(i):
                     exec(commands[i])
                     a_cmd = True
+                    break
 
 
             if not a_cmd:
