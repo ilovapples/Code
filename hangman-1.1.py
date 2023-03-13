@@ -24,7 +24,7 @@ correctLetters = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
 wrongLetters = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 def printHangMan():
     clear()
-    print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWrong Letters:       /¯¯¯¯¯¯\\")
+    print("Wrong Letters:       /¯¯¯¯¯¯\\")
     print(" %s %s %s %s             |      |" % (wrongLetters[0], wrongLetters[1], wrongLetters[2], wrongLetters[3]))
     print(" %s %s %s %s             %s      |" % (wrongLetters[4], wrongLetters[5], wrongLetters[6], wrongLetters[7], head))
     print(" %s %s %s %s            %s%s%s     |" % (wrongLetters[8], wrongLetters[9], wrongLetters[10], wrongLetters[11], leftArm, torso, rightArm))
