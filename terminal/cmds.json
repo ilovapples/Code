@@ -12,5 +12,5 @@
    "clear":"if getos() == \"Windows\":\n    os.system(\"cls\")\nelse:\n    os.system(\"clear\")",
    "py":"if cmd[3:] in os.listdir():\n    os.system(f\"python3 {cmd[3:]}\")\nelse:\n    print(f\"Error: File \\\\'{cmd[3:]}\\\\' does not exist.\")",
    "stop":"file.close()\nquit()",
-   "hi":"print(\"hi\")",
+   "hi":"print(\"hi\")"
 }
