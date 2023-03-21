@@ -2,8 +2,32 @@
 print("Importing modules...")
 import os
 from platform import system as getos
-from getkey import getkey
-from pytermgui import tim
+try:
+    from getkey import getkey
+except ModuleNotFoundError:
+    print("You need to install the 'getkey' module. Run 'pip install getkey' in your terminal.")
+    install = input("Automatically install 'getkey'? (Y/n): ").lower()
+    if install.lower() == 'y':
+        os.system('pip3 install getkey')
+        print("The program will now restart to continue.\n")
+        if getos() == 'Windows':
+            os.system('py terminal.py')
+        else:
+            os.system('python3 terminal.py')
+    quit()
+try:
+    from pytermgui import tim
+except ModuleNotFoundError:
+    print("You need to install the 'pytermgui' module. Run 'pip install pytermgui' in your terminal.")
+    install = input("Automatically install 'pytermgui'? (Y/n): ").lower()
+    if install.lower() == 'y':
+        os.system('pip3 install pytermgui')
+        print("The program will now restart to continue.\n")
+        if getos() == 'Windows':
+            os.system('py terminal.py')
+        else:
+            os.system('python3 terminal.py')
+    quit()
 import json
 
 
@@ -67,7 +91,7 @@ else:
 
 
     def create_account(username, password):
-        if f'{username} {password}' not in users.read():
+        if f'{username} {password}' not in usersList:
             with open(fileLocation + "/users.txt", 'a') as users_append:
                 users_append.write(f'{username} {password}\n')
             os.chdir(fileLocation + '/data')
@@ -182,10 +206,10 @@ else:
 
             for index, i in enumerate(a_cmd):
                 if not i:
-                    if ' ' in cmd[index]:
-                        print(f"Error: Command '{cmd[index][:cmd[index].index(' ')]}' does not exist.")
+                    if ' ' in cmds_list[index]:
+                        print(f"Error: Command '{cmds_list[index][:cmds_list[index].index(' ')]}' does not exist.")
                     else:
-                        print(f"Error: Command '{cmd[index]}' does not exist.")
+                        print(f"Error: Command '{cmds_list[index]}' does not exist.")
         login_screen()
 
     if __name__ == '__main__':

@@ -10,7 +10,7 @@
    "read":"try:\n    with open(cmd[5:]) as test1:\n        print(test1.read())\nexcept:\n    print(f\"Error: File \\'{cmd[5:]}\\' does not exist.\")",
    "deluser":"if cmd.strip() == \"deluser\":\n    username = input(\"Username: \")\nelse:\n    username = cmd[8:]\nuserpassword = input(\"Password: \")\nif check_login(username, userpassword) == 0:\n    if getos() == \"Windows\":\n        os.system(f\"rmdir /s {username}\")\n    else:\n        os.system(f\"rm -r {username}\")\n    print(f\"User \\'{username}\\' deleted.\")\nelif check_login(username, userpassword) == 1:\n    print(\"The username or password is incorrect.\")\nelse:\n    print(\"That user doesn\\'t exist.\")\n        ",
    "clear":"if getos() == \"Windows\":\n    os.system(\"cls\")\nelse:\n    os.system(\"clear\")",
-   "py":"if cmd[3:] in os.listdir():\n    os.system(f\"python3 {cmd[3:]}\")\nelse:\n    print(f\"Error: File \\\\'{cmd[3:]}\\\\' does not exist.\")",
+   "py":"if cmd.strip() == 'py':\n    os.system('python')\nelse:\n    if cmd[3:] in os.listdir():\n        if getos() == 'Windows':\n            os.system(f\"py {cmd[3:]}\")\n        else:\n            os.system(f\"python3 {cmd[3:]}\")\n    else:\n        print(f\"Error: File '{cmd[3:]}' does not exist.\")",
    "stop":"file.close()\nquit()",
-   "hi":"print(\"hi\")"
+   "example":"print(\"this command is an example\")"
 }
