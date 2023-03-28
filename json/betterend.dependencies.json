@@ -1,0 +1,74 @@
+[
+	{
+        "modname": "Trinkets",
+        "modslug": "trinkets",
+        "modlink": "https://cdn.modrinth.com/data/5aaWibi9/versions/OLwsMJv4/trinkets-3.4.2.jar",
+        "modpage": "https://modrinth.com/mod/trinkets",
+        "external": {
+            "wiki": "https://github.com/emilyalexandra/trinkets/wiki",
+            "source": "https://github.com/emilyalexandra/trinkets",
+            "issues": "https://github.com/emilyalexandra/trinkets/issues"
+        },
+        "required": false
+    },
+    {
+        "modname": "EMI",
+        "modslug": "emi",
+        "modlink": "https://cdn.modrinth.com/data/fRiHVvU7/versions/WGclw60s/emi-0.7.2%2B1.19.2.jar",
+        "modpage": "https://modrinth.com/mod/emi/",
+        "external": {
+            "wiki": "https://github.com/emilyploszaj/emi/wiki/",
+            "source": "https://github.com/emilyploszaj/emi/",
+            "issues": "https://github.com/emilyploszaj/emi/issues/"
+        },
+        "required": false
+    },
+    {
+        "modname": "Patchouli",
+        "modslug": "patchouli",
+        "modlink": "https://cdn.modrinth.com/data/nU0bVIaL/versions/NorgAU8F/Patchouli-1.19.2-77-FABRIC.jar",
+        "modpage": "https://modrinth.com/mod/patchouli",
+        "external": {
+            "wiki": "https://vazkiimods.github.io/Patchouli/",
+            "source": "https://github.com/VazkiiMods/Patchouli/",
+            "issues": "https://github.com/VazkiiMods/Patchouli/issues"
+        },
+        "required": false
+    },
+    {
+        "modname": "Roughly Enough Items (REI)",
+        "modslug": "rei",
+        "modlink": "https://cdn.modrinth.com/data/nfn13YXA/versions/AE6AqZDy/RoughlyEnoughItems-9.1.595.jar",
+        "modpage": "https://modrinth.com/mod/rei",
+        "external": {
+            "wiki": "https://www.craft.do/s/qj8mHyTVd7qkOZ",
+            "source": "https://github.com/shedaniel/RoughlyEnoughItems",
+            "issues": "https://github.com/shedaniel/RoughlyEnoughItems/discussions"
+        },
+        "required": false
+    },
+    {
+        "modname": "BCLib",
+        "modslug": "bclib",
+        "modlink": "https://cdn.modrinth.com/data/BgNRHReB/versions/mKksn4EY/bclib-2.1.6.jar",
+        "modpage": "https://modrinth.com/mod/bclib",
+        "external": {
+            "wiki": "",
+            "source": "https://github.com/quiqueck/BCLib/",
+            "issues": "https://github.com/quiqueck/BCLib/issues"
+        },
+        "required": true
+    },
+    {
+        "modname": "Fabric API",
+        "modslug": "fabric-api",
+        "modlink": "https://cdn.modrinth.com/data/P7dR8mSH/versions/hfsU4hXq/fabric-api-0.76.0%2B1.19.2.jar",
+        "modpage": "https://modrinth.com/mod/fabric-api",
+        "external": {
+            "wiki": "https://fabricmc.net/wiki/",
+            "source": "https://github.com/FabricMC/fabric",
+            "issues": "https://github.com/FabricMC/fabric/issues"
+        },
+        "required": true
+    }
+]
