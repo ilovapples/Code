@@ -10,16 +10,6 @@
         }
     },
     {
-        "modname": "Roughly Enough Items (REI)",
-        "modslug": "rei",
-        "modpage": "https://modrinth.com/mod/rei",
-        "external": {
-            "wiki": "https://www.craft.do/s/qj8mHyTVd7qkOZ",
-            "source": "https://github.com/shedaniel/RoughlyEnoughItems",
-            "issues": "https://github.com/shedaniel/RoughlyEnoughItems/discussions"
-        }
-    },
-    {
         "modname": "EMI",
         "modslug": "emi",
         "modpage": "https://modrinth.com/mod/emi",
@@ -30,23 +20,13 @@
         }
     },
     {
-        "modname": "Patchouli",
-        "modslug": "patchouli",
-        "modpage": "https://modrinth.com/mod/patchouli",
+        "modname": "WTHIT",
+        "modslug": "wthit",
+        "modpage": "https://modrinth.com/mod/wthit",
         "external": {
-            "wiki": "https://vazkiimods.github.io/Patchouli/",
-            "source": "https://github.com/VazkiiMods/Patchouli/",
-            "issues": "https://github.com/VazkiiMods/Patchouli/issues"
-        }
-    },
-    {
-        "modname": "Trinkets",
-        "modslug": "trinkets",
-        "modpage": "https://modrinth.com/mod/trinkets",
-        "external": {
-            "wiki": "https://github.com/emilyalexandra/trinkets/wiki",
-            "source": "https://github.com/emilyalexandra/trinkets",
-            "issues": "https://github.com/emilyalexandra/trinkets/issues"
+            "wiki": null,
+            "source": "https://github.com/badasintended/wthit",
+            "issues": "https://github.com/badasintended/wthit/issues"
         }
     },
     {

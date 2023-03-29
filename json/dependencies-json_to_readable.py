@@ -23,7 +23,7 @@ def doit(file):
       if key == 'external':
         print(f"{keys[key]}: ")
         for i in mod[key]:
-          if mod[key][i] != '':
+          if mod[key][i] != None:
             print(f"  {keys[i]}: {mod[key][i]}")
       else:
         print(f"{keys[key]}: {mod[key]}")
