@@ -1,0 +1,52 @@
+[
+    {
+        "modname": "BCLib",
+        "modslug": "bclib",
+        "modpage": "https://modrinth.com/mod/bclib",
+        "external": {
+            "wiki": null,
+            "source": "https://github.com/quiqueck/BCLib/",
+            "issues": "https://github.com/quiqueck/BCLib/issues"
+        }
+    },
+    {
+        "modname": "EMI",
+        "modslug": "emi",
+        "modpage": "https://modrinth.com/mod/emi",
+        "external": {
+            "wiki": "https://github.com/emilyploszaj/emi/wiki/",
+            "source": "https://github.com/emilyploszaj/emi/",
+            "issues": "https://github.com/emilyploszaj/emi/issues/"
+        }
+    },
+    {
+        "modname": "WTHIT",
+        "modslug": "wthit",
+        "modpage": "https://modrinth.com/mod/wthit",
+        "external": {
+            "wiki": null,
+            "source": "https://github.com/badasintended/wthit",
+            "issues": "https://github.com/badasintended/wthit/issues"
+        }
+    },
+    {
+        "modname": "Fabric API",
+        "modslug": "fabric-api",
+        "modpage": "https://modrinth.com/mod/fabric-api",
+        "external": {
+            "wiki": "https://fabricmc.net/wiki/",
+            "source": "https://github.com/FabricMC/fabric",
+            "issues": "https://github.com/FabricMC/fabric/issues"
+        }
+    },
+    {
+        "modname": "Mod Menu",
+        "modslug": "modmenu",
+        "modpage": "https://modrinth.com/mod/modmenu",
+        "external": {
+            "wiki": "https://github.com/TerraformersMC/ModMenu/wiki",
+            "source": "https://github.com/TerraformersMC/ModMenu",
+            "issues": "https://github.com/TerraformersMC/ModMenu/issues"
+        }
+    }
+]
