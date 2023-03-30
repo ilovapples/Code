@@ -67,4 +67,4 @@ def generate(modrinth_project: str, saveornot: bool=True) -> list:
     
 if __name__ == '__main__':
     # Call the 'generate' function with the argument 'betterend', which will generate a JSON file with the name 'betterend.dependencies.json'
-    print(json.dumps(generate('dashloader', True), indent=4))
+    print(json.dumps(generate('betterend', False), indent=4))
