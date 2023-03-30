@@ -1,0 +1,102 @@
+[
+    {
+        "modname": "Just Enough Items",
+        "modslug": "jei",
+        "modpage": "https://modrinth.com/mod/jei",
+        "external": {
+            "wiki": "https://github.com/mezz/JustEnoughItems/wiki",
+            "source": "https://github.com/mezz/JustEnoughItems",
+            "issues": "https://github.com/mezz/JustEnoughItems/issues?q=is%3Aissue"
+        }
+    },
+    {
+        "modname": "Resourceful Config",
+        "modslug": "resourceful-config",
+        "modpage": "https://modrinth.com/mod/resourceful-config",
+        "external": {
+            "wiki": null,
+            "source": "https://github.com/Team-Resourceful/Resouceful-Config",
+            "issues": "https://github.com/Team-Resourceful/Resouceful-Config/issues"
+        }
+    },
+    {
+        "modname": "Botarium",
+        "modslug": "botarium",
+        "modpage": "https://modrinth.com/mod/botarium",
+        "external": {
+            "wiki": null,
+            "source": "https://github.com/terrarium-earth/Botarium",
+            "issues": "https://github.com/terrarium-earth/Botarium/issues"
+        }
+    },
+    {
+        "modname": "Resourceful Lib",
+        "modslug": "resourceful-lib",
+        "modpage": "https://modrinth.com/mod/resourceful-lib",
+        "external": {
+            "wiki": "https://team-resourceful.gitbook.io/resourceful-lib/highlights",
+            "source": "https://github.com/Team-Resourceful/ResourcefulLib",
+            "issues": "https://github.com/Team-Resourceful/ResourcefulLib/issues"
+        }
+    },
+    {
+        "modname": "Roughly Enough Items (REI)",
+        "modslug": "rei",
+        "modpage": "https://modrinth.com/mod/rei",
+        "external": {
+            "wiki": "https://www.craft.do/s/qj8mHyTVd7qkOZ",
+            "source": "https://github.com/shedaniel/RoughlyEnoughItems",
+            "issues": "https://github.com/shedaniel/RoughlyEnoughItems/discussions"
+        }
+    },
+    {
+        "modname": "EMI",
+        "modslug": "emi",
+        "modpage": "https://modrinth.com/mod/emi",
+        "external": {
+            "wiki": "https://github.com/emilyploszaj/emi/wiki/",
+            "source": "https://github.com/emilyploszaj/emi/",
+            "issues": "https://github.com/emilyploszaj/emi/issues/"
+        }
+    },
+    {
+        "modname": "Cloth Config API",
+        "modslug": "cloth-config",
+        "modpage": "https://modrinth.com/mod/cloth-config",
+        "external": {
+            "wiki": "https://shedaniel.gitbook.io/cloth-config/",
+            "source": "https://github.com/shedaniel/ClothConfig/",
+            "issues": "https://github.com/shedaniel/ClothConfig/issues"
+        }
+    },
+    {
+        "modname": "Patchouli",
+        "modslug": "patchouli",
+        "modpage": "https://modrinth.com/mod/patchouli",
+        "external": {
+            "wiki": "https://vazkiimods.github.io/Patchouli/",
+            "source": "https://github.com/VazkiiMods/Patchouli/",
+            "issues": "https://github.com/VazkiiMods/Patchouli/issues"
+        }
+    },
+    {
+        "modname": "Fabric API",
+        "modslug": "fabric-api",
+        "modpage": "https://modrinth.com/mod/fabric-api",
+        "external": {
+            "wiki": "https://fabricmc.net/wiki/",
+            "source": "https://github.com/FabricMC/fabric",
+            "issues": "https://github.com/FabricMC/fabric/issues"
+        }
+    },
+    {
+        "modname": "Mod Menu",
+        "modslug": "modmenu",
+        "modpage": "https://modrinth.com/mod/modmenu",
+        "external": {
+            "wiki": "https://github.com/TerraformersMC/ModMenu/wiki",
+            "source": "https://github.com/TerraformersMC/ModMenu",
+            "issues": "https://github.com/TerraformersMC/ModMenu/issues"
+        }
+    }
+]

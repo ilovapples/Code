@@ -8,7 +8,7 @@ def savetofile(data: str, filename: str) -> None:
         file.write(data)
         
         
-def generate(modrinth_project: str) -> list:
+def generate(modrinth_project: str, saveornot: bool=True) -> list:
     """
     This function generates a list of dictionaries containing information about the dependencies of the
     specified Modrinth project, and writes this data to a JSON file with a filename that corresponds to the 
@@ -42,7 +42,7 @@ def generate(modrinth_project: str) -> list:
                 "issues": mod['issues_url']
             }
         }
-        
+       
         # Create a new dictionary with a subset of the information from the 'values' dictionary, and append it to the final output list
         finaljson.append(
             {
@@ -58,7 +58,8 @@ def generate(modrinth_project: str) -> list:
         )
         
     # Write the final output list to a JSON file with a filename corresponding to the project name
-    savetofile(json.dumps(finaljson, indent=4), f'{modrinth_project}.dependencies.json')
+    if saveornot:
+        savetofile(json.dumps(finaljson, indent=4), f'{modrinth_project}.dependencies.json')
     
     # Return the final output list
     return finaljson
@@ -66,4 +67,4 @@ def generate(modrinth_project: str) -> list:
     
 if __name__ == '__main__':
     # Call the 'generate' function with the argument 'betterend', which will generate a JSON file with the name 'betterend.dependencies.json'
-    generate('betterend')
+    print(json.dumps(generate('dashloader', True), indent=4))
