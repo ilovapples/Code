@@ -38,6 +38,6 @@ def download(file: str):
                 print(f"Downloaded {file_name}")
             chdir('..')
 
-JSON_FILE_NAME = 'terralith-computercraft.modpack.json'
+JSON_FILE_NAME = 'BetterComputers.modpack.json'
 download(JSON_FILE_NAME)
 print(f"Your files are in downloaded/{JSON_FILE_NAME[:JSON_FILE_NAME.find('.')]}/")
