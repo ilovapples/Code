@@ -1,30 +1,32 @@
+from os import chdir, mkdir
 import requests
-import os
 import json
 
 def dothething(file: str):
     thefile = open(file, 'r').read()
     thejson = json.loads(thefile)
 
-    os.chdir('downloaded')
+    chdir('downloaded')
     folder = file[:file.find('.')]
-    os.mkdir(folder)
-    os.chdir(folder)
+    mkdir(folder)
+    chdir(folder)
 
-    for type in thejson['types']:
-        os.mkdir(type)
-        os.chdir(type)
-        for project in thejson[type]:
+    for projecttype in thejson['types']:
+        mkdir(projecttype)
+        chdir(projecttype)
+        for project in thejson[projecttype]:
             print(project)
-            projectfile = requests.get(thejson[type][project]['directlink'], allow_redirects=True)
+            projectfile = requests.get(
+                thejson[projecttype][project]['directlink'], allow_redirects=True
+            )
             extension = ''
-            if type == 'mods':
+            if projecttype == 'mods':
                 extension = '.jar'
-            elif type == 'shaders' or type == 'datapacks':
+            elif projecttype == 'shaders' or projecttype == 'datapacks':
                 extension = '.zip'
-            with open(thejson[type][project]['slug'] + extension, 'wb') as afile:
+            with open(thejson[projecttype][project]['slug'] + extension, 'wb') as afile:
                 afile.write(projectfile.content)
-        os.chdir('..')
+        chdir('..')
 
 filename = 'terralith-computercraft.modpack.json'
 dothething(filename)
