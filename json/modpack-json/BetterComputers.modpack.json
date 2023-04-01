@@ -28,15 +28,30 @@
             "page": "https://modrinth.com/mod/betternether",
             "directlink": "https://cdn.modrinth.com/data/MpzVLzy5/versions/CnOsJRy8/better-nether-8.1.3.jar"
         },
-        "wunderreich": {
-            "name": "Wunderreich",
-            "page": "https://modrinth.com/mod/wunderreich",
-            "directlink": "https://cdn.modrinth.com/data/P6czZwFh/versions/lYhOMsP4/wunderreich-4.0.0.jar"
+        "betterf3": {
+            "name": "BetterF3",
+            "page": "https://modrinth.com/mod/betterf3",
+            "directlink": "https://cdn.modrinth.com/data/8shC1gFX/versions/nuKBXZDI/BetterF3-5.1.0-Fabric-1.19.3.jar"
+        },
+        "zoomify": {
+            "name": "Zoomify",
+            "page": "https://modrinth.com/mod/zoomify",
+            "directlink": "https://cdn.modrinth.com/data/w7ThoJFB/versions/p5RjeOJL/Zoomify-2.9.2.jar"
+        },
+        "fabric-language-kotlin": {
+            "name": "Fabric Language Kotlin",
+            "page": "https://modrinth.com/mod/fabric-language-kotlin",
+            "directlink": "https://cdn.modrinth.com/data/Ha28R6CL/versions/lgFl3olb/fabric-language-kotlin-1.9.1%2Bkotlin.1.8.10.jar"
         },
         "fabric-api": {
             "name": "Fabric API",
             "page": "https://modrinth.com/mod/fabric-api",
             "directlink": "https://cdn.modrinth.com/data/P7dR8mSH/versions/V7gqra8F/fabric-api-0.76.0%2B1.19.3.jar"
+        },
+        "yacl": {
+            "name": "YetAnotherConfigLib",
+            "page": "https://modrinth.com/mod/yacl",
+            "directlink": "https://cdn.modrinth.com/data/1eAoo2KR/versions/3EWbdCzX/YetAnotherConfigLib-2.2.0.jar"
         },
         "bclib": {
             "name": "BCLib",
@@ -67,6 +82,21 @@
             "name": "Mod Menu",
             "page": "https://modrinth.com/mod/modmenu",
             "directlink": "https://cdn.modrinth.com/data/mOgUt4GM/versions/eIrlBn1Z/modmenu-5.0.2.jar"
+        },
+        "no-chat-reports": {
+            "name": "No Chat Reports",
+            "page": "https://modrinth.com/mod/no-chat-reports",
+            "directlink": "https://cdn.modrinth.com/data/qQyHxfxd/versions/uVt4LKvF/NoChatReports-FABRIC-1.19.3-v2.0.0.jar"
+        },
+        "memory-usage-screen": {
+            "name": "Memory Usage Screen",
+            "page": "https://modrinth.com/mod/memory-usage-screen",
+            "directlink": "https://cdn.modrinth.com/data/n9mFA0ax/versions/qGGbrQAm/memoryusagescreen-fabric-mc1.19.3-1.7.0.jar"
+        },
+        "cloth-config": {
+            "name": "Cloth Config API",
+            "page": "https://modrinth.com/mod/cloth-config",
+            "directlink": "https://cdn.modrinth.com/data/9s6osm5g/versions/M3yxljrZ/cloth-config-9.0.94-fabric.jar"
         },
         "badpackets": {
             "name": "bad packets",
