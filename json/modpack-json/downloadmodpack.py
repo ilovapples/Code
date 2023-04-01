@@ -30,7 +30,7 @@ def download(file: str):
                 extension = ''
                 if projecttype == 'mods':
                     extension = '.jar'
-                elif projecttype == 'shaderpacks' or projecttype == 'datapacks':
+                else:
                     extension = '.zip'
                 file_name = project + extension
                 with open(file_name, 'wb') as afile:

@@ -1,7 +1,7 @@
 {
     "version": "1.19.3",
     "loader": "Fabric",
-    "types": ["mods", "shaderpacks", "datapacks"],
+    "types": ["mods", "shaderpacks", "datapacks", "resourcepacks"],
     "mods": {
         "terralith": {
             "name": "Terralith",
@@ -111,6 +111,13 @@
             "name": "Mob Captains",
             "page": "https://modrinth.com/datapack/mob-captains",
             "directlink": "https://cdn.modrinth.com/data/7tKn1fLd/versions/FvguSG7L/MobCaptains-v2.1.0.zip"
+        }
+    },
+    "resourcepacks": {
+        "bushybiomes": {
+            "name": "Bushy Biomes",
+            "page": "https://modrinth.com/resourcepack/bushybiomes",
+            "directlink": "https://cdn.modrinth.com/data/FuudQfX7/versions/gC8ejscj/BushyBiomesV2.5.zip"
         }
     }
 }
