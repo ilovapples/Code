@@ -1,0 +1,116 @@
+{
+    "version": "1.19.3",
+    "loader": "Fabric",
+    "types": ["mods", "shaderpacks", "datapacks"],
+    "mods": {
+        "terralith": {
+            "name": "Terralith",
+            "page": "https://modrinth.com/mod/terralith",
+            "directlink": "https://cdn.modrinth.com/data/8oi3bsk5/versions/1latp88m/Terralith_1.19.3_v2.3.7b.jar"
+        },
+        "cc-restitched": {
+            "name": "CC: Restitched",
+            "page": "https://modrinth.com/mod/cc-restitched",
+            "directlink": "https://cdn.modrinth.com/data/eldBwa5V/versions/XZ4nB6es/cc-restitched-1.102.0.jar"
+        },
+        "ultris": {
+            "name": "Ultris: Boss Expansion",
+            "page": "https://modrinth.com/mod/ultris",
+            "directlink": "https://cdn.modrinth.com/data/tA7mQv7R/versions/WjNWO6NS/ultris-5.6.7g.jar"
+        },
+        "betterend": {
+            "name": "BetterEnd",
+            "page": "https://modrinth.com/mod/betterend",
+            "directlink": "https://cdn.modrinth.com/data/gc8OEnCC/versions/aXZXyoTS/better-end-3.1.2.jar"
+        },
+        "betternether": {
+            "name": "BetterNether",
+            "page": "https://modrinth.com/mod/betternether",
+            "directlink": "https://cdn.modrinth.com/data/MpzVLzy5/versions/CnOsJRy8/better-nether-8.1.3.jar"
+        },
+        "wunderreich": {
+            "name": "Wunderreich",
+            "page": "https://modrinth.com/mod/wunderreich",
+            "directlink": "https://cdn.modrinth.com/data/P6czZwFh/versions/lYhOMsP4/wunderreich-4.0.0.jar"
+        },
+        "fabric-api": {
+            "name": "Fabric API",
+            "page": "https://modrinth.com/mod/fabric-api",
+            "directlink": "https://cdn.modrinth.com/data/P7dR8mSH/versions/V7gqra8F/fabric-api-0.76.0%2B1.19.3.jar"
+        },
+        "bclib": {
+            "name": "BCLib",
+            "page": "https://modrinth.com/mod/bclib",
+            "directlink": "https://cdn.modrinth.com/data/BgNRHReB/versions/CXLaMuHt/bclib-2.2.4.jar"
+        },
+        "wthit": {
+            "name": "WTHIT",
+            "page": "https://modrinth.com/mod/wthit",
+            "directlink": "https://cdn.modrinth.com/data/6AQIaxuO/versions/JYbkilai/wthit-fabric-6.3.1.jar"
+        },
+        "emi": {
+            "name": "EMI",
+            "page": "https://modrinth.com/mod/emi",
+            "directlink": "https://cdn.modrinth.com/data/fRiHVvU7/versions/lnPekvZX/emi-0.7.3%2B1.19.3.jar"
+        },
+        "trinkets": {
+            "name": "Trinkets",
+            "page": "https://modrinth.com/mod/trinkets",
+            "directlink": "https://cdn.modrinth.com/data/5aaWibi9/versions/5zEAvqnX/trinkets-3.5.1.jar"
+        },
+        "patchouli": {
+            "name": "Patchouli",
+            "page": "https://modrinth.com/mod/patchouli",
+            "directlink": "https://cdn.modrinth.com/data/nU0bVIaL/versions/uLqYYIHD/Patchouli-1.19.3-78-FABRIC.jar"
+        },
+        "modmenu": {
+            "name": "Mod Menu",
+            "page": "https://modrinth.com/mod/modmenu",
+            "directlink": "https://cdn.modrinth.com/data/mOgUt4GM/versions/eIrlBn1Z/modmenu-5.0.2.jar"
+        },
+        "badpackets": {
+            "name": "bad packets",
+            "page": "https://modrinth.com/mod/badpackets",
+            "directlink": "https://cdn.modrinth.com/data/ftdbN0KK/versions/9hA9pLHz/badpackets-fabric-0.3.4.jar"
+        },
+        "sodium": {
+            "name": "Sodium",
+            "page": "https://modrinth.com/mod/sodium",
+            "directlink": "https://cdn.modrinth.com/data/AANobbMI/versions/idtcaIVT/sodium-fabric-mc1.19.3-0.4.9%2Bbuild.23.jar"
+        },
+        "lithium": {
+            "name": "Lithium",
+            "page": "https://modrinth.com/mod/lithium",
+            "directlink": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/53cwYYb1/lithium-fabric-mc1.19.3-0.11.1.jar"
+        },
+        "iris": {
+            "name": "Iris Shaders",
+            "page": "https://modrinth.com/mod/iris",
+            "directlink": "https://cdn.modrinth.com/data/YL57xq9U/versions/ExtC2pRY/iris-mc1.19.3-1.5.2.jar"
+        }
+    },
+    "shaderpacks": {
+        "complimenary-v4": {
+            "name": "Complementary V4",
+            "page": "https://www.complementary.dev/shaders-v4/",
+            "directlink": "https://cdn.modrinth.com/data/R6NEzAwj/versions/YWBtNYH3/ComplementaryShaders_v4.7.1.zip"
+        },
+        "complimenary-reimagined": {
+            "name": "Complementary Reimagined",
+            "page": "https://www.complementary.dev/reimagined/",
+            "directlink": "https://cdn.modrinth.com/data/HVnmMxH1/versions/jCIQGZp3/ComplementaryReimagined_r2.0.3.zip"
+        }
+    },
+    "datapacks": {
+        "geophilic": {
+            "name": "Geophilic",
+            "page": "https://modrinth.com/datapack/geophilic",
+            "directlink": "https://cdn.modrinth.com/data/hl5OLM95/versions/gKMt1GJV/geophilic%E2%80%901.19%E2%80%901.2.2.zip"
+        },
+        "mob-captains": {
+            "name": "Mob Captains",
+            "page": "https://modrinth.com/datapack/mob-captains",
+            "directlink": "https://cdn.modrinth.com/data/7tKn1fLd/versions/FvguSG7L/MobCaptains-v2.1.0.zip"
+        }
+    }
+}

@@ -10,7 +10,8 @@ def download(file: str):
     Args:
         file (str): the name of the .modpack.json file to read from for modpack data information 
     """
-    with open(file, 'r', encoding='UTF-8') as thefile:
+    with open(file, 'r', encoding='UTF-8') as thefiletoread:
+        thefile = thefiletoread.read()
         thejson = json.loads(thefile)
         chdir('downloaded')
         folder = file[:file.find('.')]
@@ -21,7 +22,6 @@ def download(file: str):
             mkdir(projecttype)
             chdir(projecttype)
             for project in thejson[projecttype]:
-                print(project)
                 projectfile = requests.get(
                     thejson[projecttype][project]['directlink'],
                     allow_redirects=True,
@@ -30,12 +30,14 @@ def download(file: str):
                 extension = ''
                 if projecttype == 'mods':
                     extension = '.jar'
-                elif projecttype == 'shaders' or projecttype == 'datapacks':
+                elif projecttype == 'shaderpacks' or projecttype == 'datapacks':
                     extension = '.zip'
-                with open(thejson[projecttype][project]['slug'] + extension, 'wb') as afile:
+                file_name = project + extension
+                with open(file_name, 'wb') as afile:
                     afile.write(projectfile.content)
+                print(f"Downloaded {file_name}")
             chdir('..')
 
-FILE_NAME = 'terralith-computercraft.modpack.json'
-download(FILE_NAME)
-print(f"Your files are in downloaded/{FILE_NAME[:FILE_NAME.find('.')]}/")
+JSON_FILE_NAME = 'terralith-computercraft.modpack.json'
+download(JSON_FILE_NAME)
+print(f"Your files are in downloaded/{JSON_FILE_NAME[:JSON_FILE_NAME.find('.')]}/")
