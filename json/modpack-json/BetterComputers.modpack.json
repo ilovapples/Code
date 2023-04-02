@@ -38,6 +38,11 @@
             "page": "https://modrinth.com/mod/zoomify",
             "directlink": "https://cdn.modrinth.com/data/w7ThoJFB/versions/p5RjeOJL/Zoomify-2.9.2.jar"
         },
+        "continuity": {
+            "name": "Continuity",
+            "page": "https://modrinth.com/mod/continuity",
+            "directlink": "https://cdn.modrinth.com/data/1IjD5062/versions/4h5IIa7B/continuity-3.0.0-beta.2%2B1.19.3.jar"
+        },
         "fabric-language-kotlin": {
             "name": "Fabric Language Kotlin",
             "page": "https://modrinth.com/mod/fabric-language-kotlin",
@@ -112,6 +117,11 @@
             "name": "Lithium",
             "page": "https://modrinth.com/mod/lithium",
             "directlink": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/53cwYYb1/lithium-fabric-mc1.19.3-0.11.1.jar"
+        },
+        "indium": {
+            "name": "Indium",
+            "page": "https://modrinth.com/mod/indium",
+            "directlink": "https://cdn.modrinth.com/data/Orvt0mRa/versions/U94NcDpV/indium-1.0.14%2Bmc1.19.3.jar"
         },
         "iris": {
             "name": "Iris Shaders",
