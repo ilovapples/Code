@@ -1,4 +1,4 @@
-from os import chdir, mkdir
+from os import chdir, mkdir, path
 import json
 import requests
 
@@ -11,6 +11,9 @@ def download(file: str):
         file (str): the name of the .modpack.json file to read from for modpack data information 
     """
     with open(file, 'r', encoding='UTF-8') as thefiletoread:
+        if not path.isdir('downloaded'):
+            mkdir('downloaded')
+            
         thefile = thefiletoread.read()
         thejson = json.loads(thefile)
         chdir('downloaded')
@@ -32,7 +35,9 @@ def download(file: str):
                     extension = '.jar'
                 else:
                     extension = '.zip'
+                
                 file_name = project + extension
+                
                 with open(file_name, 'wb') as afile:
                     afile.write(projectfile.content)
                 print(f"Downloaded {file_name}")
