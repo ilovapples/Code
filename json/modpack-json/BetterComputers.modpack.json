@@ -58,10 +58,10 @@
             "page": "https://modrinth.com/mod/bclib",
             "directlink": "https://cdn.modrinth.com/data/BgNRHReB/versions/CXLaMuHt/bclib-2.2.4.jar"
         },
-        "wthit": {
-            "name": "WTHIT",
-            "page": "https://modrinth.com/mod/wthit",
-            "directlink": "https://cdn.modrinth.com/data/6AQIaxuO/versions/JYbkilai/wthit-fabric-6.3.1.jar"
+        "jade": {
+            "name": "Jade",
+            "page": "https://modrinth.com/mod/jade",
+            "directlink": "https://cdn.modrinth.com/data/nvQzSEkH/versions/HIL9jJQF/Jade-1.19.3-fabric-9.4.1.jar"
         },
         "emi": {
             "name": "EMI",
