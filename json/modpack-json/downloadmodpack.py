@@ -50,7 +50,7 @@ def download(file: str):
                 file_name = project + extension
                 with open(file_name, 'wb') as afile:
                     afile.write(projectfile.content)
-                print(f"Downloaded {file_name}")
+                print(f"Downloaded:   {file_name}")
             chdir('..')
 
 JSON_FILE_NAME = 'BetterComputers.modpack.json'
