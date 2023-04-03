@@ -14,6 +14,9 @@ def download(file: str):
         mkdir('downloaded')
 
     with open(file, 'r', encoding='UTF-8') as thefiletoread:
+        if not path.isdir('downloaded'):
+            mkdir('downloaded')
+            
         thefile = thefiletoread.read()
 
     thejson = json.loads(thefile)
@@ -46,9 +49,11 @@ def download(file: str):
                 extension = ''
                 if projecttype == 'mods':
                     extension = '.jar'
-                elif projecttype == 'shaderpacks' or projecttype == 'datapacks':
+                else:
                     extension = '.zip'
+                
                 file_name = project + extension
+                
                 with open(file_name, 'wb') as afile:
                     afile.write(projectfile.content)
                     print(f"Downloaded:   {file_name}")
