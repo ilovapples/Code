@@ -18,11 +18,23 @@ def download(file: str):
         thejson = json.loads(thefile)
         chdir('downloaded')
         folder = file[:file.find('.')]
-        mkdir(folder)
+        if not path.isdir(folder):
+            mkdir(folder)
         chdir(folder)
 
+        with open('icon.png', 'wb') as theiconfile:
+            iconfile = requests.get(
+                thejson['icon'],
+                allow_redirects=True,
+                timeout=10
+            )
+
+            theiconfile.write(iconfile.content)
+            print("Finished Downloading icon.")
+
         for projecttype in thejson['types']:
-            mkdir(projecttype)
+            if not path.isdir(projecttype):
+                mkdir(projecttype)
             chdir(projecttype)
             for project in thejson[projecttype]:
                 projectfile = requests.get(

@@ -1,7 +1,8 @@
 {
     "version": "1.19.3",
     "loader": "Fabric",
-    "types": ["mods", "shaderpacks", "datapacks"],
+    "types": ["mods", "shaderpacks"],
+    "icon": "https://github.com/ilovapples/Code/raw/main/json/modpack-json/bettercomputersmodpack-icon.png",
     "mods": {
         "terralith": {
             "name": "Terralith",
@@ -15,8 +16,18 @@
         },
         "ultris": {
             "name": "Ultris: Boss Expansion",
-            "page": "https://modrinth.com/mod/ultris",
+            "page": "https://modrinth.com/datapack/ultris",
             "directlink": "https://cdn.modrinth.com/data/tA7mQv7R/versions/WjNWO6NS/ultris-5.6.7g.jar"
+        },
+        "geophilic": {
+            "name": "Geophilic",
+            "page": "https://modrinth.com/datapack/geophilic",
+            "directlink": "https://cdn.modrinth.com/data/hl5OLM95/versions/aEPbY2ib/geophilic-fabric-1.19-1.2.2.jar"
+        },
+        "mob-captains": {
+            "name": "Mob Captains",
+            "page": "https://modrinth.com/datapack/mob-captains",
+            "directlink": "https://cdn.modrinth.com/data/7tKn1fLd/versions/x3rolx57/mob-captains-v2.1.0.jar"
         },
         "betterend": {
             "name": "BetterEnd",
@@ -130,27 +141,15 @@
         }
     },
     "shaderpacks": {
-        "complimenary-v4": {
+        "complementary-v4": {
             "name": "Complementary V4",
             "page": "https://www.complementary.dev/shaders-v4/",
             "directlink": "https://cdn.modrinth.com/data/R6NEzAwj/versions/YWBtNYH3/ComplementaryShaders_v4.7.1.zip"
         },
-        "complimenary-reimagined": {
+        "complementary-reimagined": {
             "name": "Complementary Reimagined",
             "page": "https://www.complementary.dev/reimagined/",
             "directlink": "https://cdn.modrinth.com/data/HVnmMxH1/versions/jCIQGZp3/ComplementaryReimagined_r2.0.3.zip"
-        }
-    },
-    "datapacks": {
-        "geophilic": {
-            "name": "Geophilic",
-            "page": "https://modrinth.com/datapack/geophilic",
-            "directlink": "https://cdn.modrinth.com/data/hl5OLM95/versions/gKMt1GJV/geophilic%E2%80%901.19%E2%80%901.2.2.zip"
-        },
-        "mob-captains": {
-            "name": "Mob Captains",
-            "page": "https://modrinth.com/datapack/mob-captains",
-            "directlink": "https://cdn.modrinth.com/data/7tKn1fLd/versions/FvguSG7L/MobCaptains-v2.1.0.zip"
         }
     }
 }
