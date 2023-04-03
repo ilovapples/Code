@@ -36,28 +36,28 @@ def download(file: str):
         theiconfile.write(iconfile.content)
         print("Finished Downloading icon.")
 
-        for projecttype in thejson['types']:
-            if not path.isdir(projecttype):
-                mkdir(projecttype)
-            chdir(projecttype)
-            for project in thejson[projecttype]:
-                projectfile = requests.get(
-                    thejson[projecttype][project]['directlink'],
-                    allow_redirects=True,
-                    timeout=10
-                )
-                extension = ''
-                if projecttype == 'mods':
-                    extension = '.jar'
-                else:
-                    extension = '.zip'
-                
-                file_name = project + extension
-                
-                with open(file_name, 'wb') as afile:
-                    afile.write(projectfile.content)
-                    print(f"Downloaded:   {file_name}")
-            chdir('..')
+    for projecttype in thejson['types']:
+        if not path.isdir(projecttype):
+            mkdir(projecttype)
+        chdir(projecttype)
+        for project in thejson[projecttype]:
+            projectfile = requests.get(
+                thejson[projecttype][project]['directlink'],
+                allow_redirects=True,
+                timeout=10
+            )
+            extension = ''
+            if projecttype == 'mods':
+                extension = '.jar'
+            else:
+                extension = '.zip'
+
+            file_name = project + extension
+
+            with open(file_name, 'wb') as afile:
+                afile.write(projectfile.content)
+                print(f"Downloaded:   {file_name}")
+        chdir('..')
 
 JSON_FILE_NAME = 'BetterComputers.modpack.json'
 download(JSON_FILE_NAME)
