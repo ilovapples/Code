@@ -13,7 +13,7 @@ def download(file: str):
     with open(file, 'r', encoding='UTF-8') as thefiletoread:
         if not path.isdir('downloaded'):
             mkdir('downloaded')
-            
+
         thefile = thefiletoread.read()
         thejson = json.loads(thefile)
         chdir('downloaded')
