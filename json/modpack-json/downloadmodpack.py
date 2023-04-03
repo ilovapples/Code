@@ -10,27 +10,28 @@ def download(file: str):
     Args:
         file (str): the name of the .modpack.json file to read from for modpack data information 
     """
+    if not path.isdir('downloaded'):
+        mkdir('downloaded')
+
     with open(file, 'r', encoding='UTF-8') as thefiletoread:
-        if not path.isdir('downloaded'):
-            mkdir('downloaded')
-
         thefile = thefiletoread.read()
-        thejson = json.loads(thefile)
-        chdir('downloaded')
-        folder = file[:file.find('.')]
-        if not path.isdir(folder):
-            mkdir(folder)
-        chdir(folder)
 
-        with open('icon.png', 'wb') as theiconfile:
-            iconfile = requests.get(
-                thejson['icon'],
-                allow_redirects=True,
-                timeout=10
-            )
+    thejson = json.loads(thefile)
+    chdir('downloaded')
+    folder = file[:file.find('.')]
+    if not path.isdir(folder):
+        mkdir(folder)
+    chdir(folder)
 
-            theiconfile.write(iconfile.content)
-            print("Finished Downloading icon.")
+    with open('icon.png', 'wb') as theiconfile:
+        iconfile = requests.get(
+            thejson['icon'],
+            allow_redirects=True,
+            timeout=10
+        )
+
+        theiconfile.write(iconfile.content)
+        print("Finished Downloading icon.")
 
         for projecttype in thejson['types']:
             if not path.isdir(projecttype):
@@ -50,7 +51,7 @@ def download(file: str):
                 file_name = project + extension
                 with open(file_name, 'wb') as afile:
                     afile.write(projectfile.content)
-                print(f"Downloaded:   {file_name}")
+                    print(f"Downloaded:   {file_name}")
             chdir('..')
 
 JSON_FILE_NAME = 'BetterComputers.modpack.json'
