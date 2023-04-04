@@ -114,6 +114,14 @@ mods:
     name: Iris Shaders
     page: https://modrinth.com/mod/iris
     directlink: https://cdn.modrinth.com/data/YL57xq9U/versions/ExtC2pRY/iris-mc1.19.3-1.5.2.jar
+  idwtialsimmoedm:
+    name: Idwtialsimmoedm
+    page: https://modrinth.com/mod/idwtialsimmoedm
+    directlink: https://cdn.modrinth.com/data/ad89WlWh/versions/5TNUL7rC/idwtialsimmoedm-0.2.0%2B1.19.3.jar
+  replaymod:
+    name: ReplayMod
+    page: https://modrinth.com/mod/replaymod
+    directlink: https://cdn.modrinth.com/data/Nv2fQJo5/versions/C1eDr4u8/replaymod-1.19.3-2.6.11.jar
 shaderpacks:
   complementary-v4:
     name: Complementary V4
