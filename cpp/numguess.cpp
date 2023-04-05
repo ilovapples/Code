@@ -5,13 +5,19 @@ using namespace std;
 
 int main() {
     cout << "\n\033[1mNumber Guessing Game\033[0m\n";
+    // range
     int lb = 1, ub = 10;
+    
+    // define rand seed
     srand(time(0));
 
+    // guesses num
     int guesses = 10;
 
+    // preset rand num
     int num = rand() % (ub - lb);
 
+    // run this code 5 times
     for (int i = 0; i < 5; i++) {
         cout << "Guess a number between " << lb << " and " << ub << endl;
         cout << "Guess: ";
