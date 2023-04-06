@@ -51,6 +51,18 @@ int main() {
     while (playing == 'y') {
         cout << "Slot: ";
         cin >> inputstr;
+        // check if the input is 'r', for 'reset'  
+        if (inputstr == "r") {
+            for (int i; i < 9; i++) {
+                slots[i] = "_";
+            };
+            turn = 0;
+            X_or_O = "X";
+            clear();
+            printBoard();
+            continue;
+        }
+        
         input = stoi(inputstr);
         
         if (slots[input-1] != "_") {
@@ -65,6 +77,8 @@ int main() {
             printBoard();
         }
         // check if its a win
+
+        // check for top row. (1-3)
         if (slots[0] == slots[1] && slots[1] == slots[2] && slots[2] != "_") {
             cout << "\n" << X_or_O << " won!\n";
             cout << "Play again? (Y/n): ";
@@ -73,12 +87,118 @@ int main() {
                 for (int i; i < 9; i++) {
                     slots[i] = "_";
                 };
+                turn = 0;
                 main();
                 return 0;
             } else {
                 return 0;
             };
-        };
+        //check for middle row
+        } else if (slots[3] == slots[4] && slots[4] == slots[5] && slots[5] != "_") {
+            cout << "\n" << X_or_O << " won!\n";
+            cout << "Play again? (Y/n): ";
+            cin >> playing;
+            if (playing == 'y' || playing == 'Y') {
+                for (int i; i < 9; i++) {
+                    slots[i] = "_";
+                };
+                turn = 0;
+                main();
+                return 0;
+            } else {
+                return 0;
+            };
+        //check for bottom row
+        } else if (slots[6] == slots[7] && slots[7] == slots[8] && slots[8] != "_") {
+            cout << "\n" << X_or_O << " won!\n";
+            cout << "Play again? (Y/n): ";
+            cin >> playing;
+            if (playing == 'y' || playing == 'Y') {
+                for (int i; i < 9; i++) {
+                    slots[i] = "_";
+                };
+                turn = 0;
+                main();
+                return 0;
+            } else {
+                return 0;
+            };
+        // check for column one (1, 4, 7)
+        } else if (slots[0] == slots[3] && slots[3] == slots[6] && slots[6] != "_") {
+            cout << "\n" << X_or_O << " won!\n";
+            cout << "Play again? (Y/n): ";
+            cin >> playing;
+            if (playing == 'y' || playing == 'Y') {
+                for (int i; i < 9; i++) {
+                    slots[i] = "_";
+                };
+                turn = 0;
+                main();
+                return 0;
+            } else {
+                return 0;
+            };
+        // check for middle column (2, 5, 8) 
+        } else if (slots[1] == slots[4] && slots[4] == slots[7] && slots[7] != "_") {
+            cout << "\n" << X_or_O << " won!\n";
+            cout << "Play again? (Y/n): ";
+            cin >> playing;
+            if (playing == 'y' || playing == 'Y') {
+                for (int i; i < 9; i++) {
+                    slots[i] = "_";
+                };
+                turn = 0;
+                main();
+                return 0;
+            } else {
+                return 0;
+            };
+        // far right column
+        } else if (slots[2] == slots[5] && slots[5] == slots[8] && slots[8] != "_") {
+            cout << "\n" << X_or_O << " won!\n";
+            cout << "Play again? (Y/n): ";
+            cin >> playing;
+            if (playing == 'y' || playing == 'Y') {
+                for (int i; i < 9; i++) {
+                    slots[i] = "_";
+                };
+                turn = 0;
+                main();
+                return 0;
+            } else {
+                return 0;
+            };
+        // top left to bottom right: diagonal
+        } else if (slots[0] == slots[4] && slots[4] == slots[8] && slots[8] != "_") {
+            cout << "\n" << X_or_O << " won!\n";
+            cout << "Play again? (Y/n): ";
+            cin >> playing;
+            if (playing == 'y' || playing == 'Y') {
+                for (int i; i < 9; i++) {
+                    slots[i] = "_";
+                };
+                turn = 0;
+                main();
+                return 0;
+            } else {
+                return 0;
+            };
+        // top right to bottom left: diagonal
+        } else if (slots[2] == slots[4] && slots[4] == slots[6] && slots[6] != "_") {
+            cout << "\n" << X_or_O << " won!\n";
+            cout << "Play again? (Y/n): ";
+            cin >> playing;
+            if (playing == 'y' || playing == 'Y') {
+                for (int i; i < 9; i++) {
+                    slots[i] = "_";
+                };
+                turn = 0;
+                main();
+                return 0;
+            } else {
+                return 0;
+            };
+        }
         // check if its a tie
         if (
             slots[0] != "_" &&
