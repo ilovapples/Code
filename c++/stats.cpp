@@ -2,6 +2,7 @@
 #include <cmath>
 #include <time.h>
 #include <cstdlib>
+#include <algorithm>
 using namespace std;
 
 // int randdataset(int length, int min_, int max_) {
@@ -14,13 +15,12 @@ using namespace std;
 
 int dataset[4] = {15, 16, 17, 18};
 
-int length() {
-    // the four is the size of an integer in bytes, not the length of the array
+double length() {
     return sizeof(dataset) / sizeof(int);
 }
 
-int sum(int data[]) {
-    int total = 0;
+double sum(int data[]) {
+    double total = 0;
     for (int i = 0; i < length(); i++) {
         total += dataset[i];
     }
@@ -28,14 +28,31 @@ int sum(int data[]) {
 }
 
 double mean(int data[]) {
-    return sum(data)/length();
+    return sum(data) / length();
+}
+
+int median(int data[]) {
+    // copy the array
+    int copy[] = {};
+    for (int i; i < length(); i++) {
+        copy[i] = data[i];
+    };
+    size_t len = sizeof(copy) / sizeof(copy[0]);
+    sort(copy, copy + len);
+
+    for (int i; i < length(); i++) {
+        cout << endl << copy[i];
+    };
+    return 0;
 }
 
 
 int main() {
     // int dataset[4] = {15, 16, 17, 18};
-    cout << "Mean: " << mean(dataset) << endl;
+    double themean = mean(dataset);
+    cout << "Mean: " << themean << endl;
     cout << "Sum: " << sum(dataset) << endl;
     cout << "Length: " << length() << endl;
+    median(dataset);
     return 0;
 }
