@@ -1,3 +1,5 @@
+from sys import argv
+
 def run(seed):
     iteration = 0
     final = ""
@@ -22,4 +24,9 @@ def run(seed):
     padding = 25 - len(final)
     final = f"{iteration}:" + " " * padding + f"{str(int(num))}"    
     print(final)
-run(15)
+
+if len(argv) >= 2:
+    seed = argv[1]
+    run(int(seed))
+else:
+    run(15)
