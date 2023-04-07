@@ -1,0 +1,156 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/badpackets.pw.toml"
+hash = "3ff9bb7c715f248b800335b19f518952349f44032cc3681b77e1e3ab1997f585"
+metafile = true
+
+[[files]]
+file = "mods/bclib.pw.toml"
+hash = "f63c00aa52225785d25c52ec76643fdc1fcb37f0d482460ea57a682350f12389"
+metafile = true
+
+[[files]]
+file = "mods/betterend.pw.toml"
+hash = "5a4cacca865b1168f818e250e50ec7691148ada05f1aaa30eec616a26ab5b1d8"
+metafile = true
+
+[[files]]
+file = "mods/betterf3.pw.toml"
+hash = "11fe9da06043756e637e29d0e051f6745a788464a551808534162a96616c8615"
+metafile = true
+
+[[files]]
+file = "mods/betternether.pw.toml"
+hash = "0b1652ae700cb9cd822ed4f709a56683c7ee612d62a0fa3955baf98a0c08d9f7"
+metafile = true
+
+[[files]]
+file = "mods/cc-restitched.pw.toml"
+hash = "ae1acb8953c30ac121915e22913c8905c3a7d5f9fa4d7650abff16049c83d6ee"
+metafile = true
+
+[[files]]
+file = "mods/cloth-config.pw.toml"
+hash = "86498eb7f9326155844799dc57c1372fc5000b86f046994162cccd2e480a96ed"
+metafile = true
+
+[[files]]
+file = "mods/continuity.pw.toml"
+hash = "4cb02206331c9a6d207681b2e40b4b8648a462b0c31e6e634200a01b592b1d3d"
+metafile = true
+
+[[files]]
+file = "mods/emi.pw.toml"
+hash = "0ca0d82d34737fa84dd45a24a1524acb91197848d6180bb7963043bd60959398"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "3631c36fa685ff8b408b83f41cb5ed62d44a10314247a379c20bceaae32ce88b"
+metafile = true
+
+[[files]]
+file = "mods/fabric-language-kotlin.pw.toml"
+hash = "62360beac5e427be02b732421c9e4fe53819bc6f5e2cc821fd6f2d9278c5485b"
+metafile = true
+
+[[files]]
+file = "mods/geophilic.pw.toml"
+hash = "15c7e112131d8ea9b726ad3782fec84fa6e5dfa4a80ec0a5001209e44eeea7a5"
+metafile = true
+
+[[files]]
+file = "mods/idwtialsimmoedm.pw.toml"
+hash = "524211cbee1f5a67d9ca0823755f3678044bf1040ecf43708226c5ef312d96c1"
+metafile = true
+
+[[files]]
+file = "mods/indium.pw.toml"
+hash = "064fafff245baf812342dc9af4acf661dec663bab2a4067c65a27fa00860efb1"
+metafile = true
+
+[[files]]
+file = "mods/iris.pw.toml"
+hash = "09d31307f81a06df5ab65ff57c2c830180bbc1138bb8326557172b0a883d6b8b"
+metafile = true
+
+[[files]]
+file = "mods/jade.pw.toml"
+hash = "a42a498e377334891811bf635a4c35210e04fee5d4f832588bbdc7a5947c4a9b"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "2dcac529633f402a5a325b8031bf15a06db668b912e6be1596836bde3afb17f1"
+metafile = true
+
+[[files]]
+file = "mods/memory-usage-screen.pw.toml"
+hash = "c4a7abed20f5b5906c6edc56129e81e29f047ab4f72ba5f1702a08a7cafea5c3"
+metafile = true
+
+[[files]]
+file = "mods/mob-captains.pw.toml"
+hash = "1c22f1a10274b466f1a90bb694c41ea3ddf2048792c4fb906936738e6b3c4374"
+metafile = true
+
+[[files]]
+file = "mods/modmenu.pw.toml"
+hash = "c6932018158da544553f88b977bed1946f59d9c86685f2023b0a9ee196fc3087"
+metafile = true
+
+[[files]]
+file = "mods/no-chat-reports.pw.toml"
+hash = "df11b66e152011f96cc5a4dbf35d2dec99c4373cb19a8c1c761368170d425cf4"
+metafile = true
+
+[[files]]
+file = "mods/patchouli.pw.toml"
+hash = "8e7e00cb862a9c77dd194222da7461fcf3fe1c7899cb8890c32dec9c40e6aa39"
+metafile = true
+
+[[files]]
+file = "mods/replaymod.pw.toml"
+hash = "11e3552c0e6cb9d09133b002c17cbe7d5bc566a23a06dfa4b15fd9637c4e3f48"
+metafile = true
+
+[[files]]
+file = "mods/sodium.pw.toml"
+hash = "1ab96020d0954a72b5cc150b375f57cf8968ac2c1809a000472076f8675eb9ea"
+metafile = true
+
+[[files]]
+file = "mods/terralith.pw.toml"
+hash = "7d8109543303c680aa1d4d5d4e81548ec602f910ca2e9a32133a07c0dc3c2df7"
+metafile = true
+
+[[files]]
+file = "mods/trinkets.pw.toml"
+hash = "4d27498ef081e770f7c1516f6d31cd467dffbe15d81d93bed06cbca92093943c"
+metafile = true
+
+[[files]]
+file = "mods/ultris.pw.toml"
+hash = "767e48ae2e2e00666a90052074b963f4ac65cb0b383050d15fc7bf83e74d2e41"
+metafile = true
+
+[[files]]
+file = "mods/yacl.pw.toml"
+hash = "c66028d555a347562589645179fe8834bd04d48b78c9a667f20b4178211dfbb3"
+metafile = true
+
+[[files]]
+file = "mods/zoomify.pw.toml"
+hash = "72214bf1c5210d1fd5d47f5fe354310ea7d7e1268eb48574c0655d6d4f4d5c42"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-reimagined.pw.toml"
+hash = "e7bd470918b908960a77db10cb7918c67e6c90ac5d97218d2f875dd6e4e3dda8"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-shaders-v4.pw.toml"
+hash = "d468216fa4b4917769fae3179b7bb47656f8a65474e87352d5b379783384e0af"
+metafile = true

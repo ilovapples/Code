@@ -1,0 +1,13 @@
+name = "Better Computers"
+author = "ilovapples"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "6831b24ff0194dd1a4ad05ddde9d7950eed0758a07b34dd36260239f5ae7fcb1"
+
+[versions]
+fabric = "0.14.19"
+minecraft = "1.19.3"
