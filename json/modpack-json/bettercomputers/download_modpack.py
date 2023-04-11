@@ -39,7 +39,7 @@ def download(file: str, yamlornot: bool) -> dict:
         mkdir(folder)
     chdir(folder)
     
-    if 'icon' in thedata['types']:
+    if thedata['has-icon']:
         icontimestart = time.time()
         with open('icon.png', 'wb') as theiconfile:
             iconfile = requests.get(
@@ -58,15 +58,10 @@ def download(file: str, yamlornot: bool) -> dict:
     for projecttype in thedata['types']:
         if not path.isdir(projecttype):
             mkdir(projecttype)
+        
         chdir(projecttype)
 
         for project in thedata[projecttype]:
-            downloadtimestart = time.time()
-            projectfile = requests.get(
-                thedata[projecttype][project]['directlink'],
-                allow_redirects=True,
-                timeout=10
-            )
             extension = ''
             if projecttype == 'mods':
                 extension = '.jar'
@@ -74,13 +69,21 @@ def download(file: str, yamlornot: bool) -> dict:
                 extension = '.zip'
 
             file_name = project + extension
+            
+            if not path.isfile(projecttype + '/' + file_name):
+                downloadtimestart = time.time()
+                projectfile = requests.get(
+                    thedata[projecttype][project]['directlink'],
+                    allow_redirects=True,
+                    timeout=10
+                )
 
-            with open(file_name, 'wb') as afile:
-                afile.write(projectfile.content)
-                downloadtimeend = time.time()
-                print(f"Downloaded:   {file_name}")
-                print("In: %.5f seconds.\n" % (downloadtimeend - downloadtimestart))
-            times.append(downloadtimeend - downloadtimestart)
+                with open(file_name, 'wb') as afile:
+                    afile.write(projectfile.content)
+                    downloadtimeend = time.time()
+                    print(f"Downloaded:   {file_name}")
+                    print("In: %.5f seconds.\n" % (downloadtimeend - downloadtimestart))
+                times.append(downloadtimeend - downloadtimestart)
 
         chdir('..')
     overall_end = time.time()
@@ -90,7 +93,7 @@ def download(file: str, yamlornot: bool) -> dict:
     }
 
 if __name__ == '__main__':
-    MAIN_FILE_NAME = 'shaders.yaml'
+    MAIN_FILE_NAME = 'BetterComputers.modpack.yaml'
     thedownload = download(MAIN_FILE_NAME, True)
     print(f"Your files are in downloaded/{MAIN_FILE_NAME[:MAIN_FILE_NAME.find('.')]}/\n")
     print("Overall, it took %.5f seconds to download everything." % thedownload['overall'])

@@ -3,7 +3,7 @@ loader: Fabric
 types:
 - mods
 - shaderpacks
-- icon
+has-icon: true
 icon: https://github.com/ilovapples/Code/raw/main/json/modpack-json/bettercomputersmodpack-icon.png
 mods:
   terralith:
