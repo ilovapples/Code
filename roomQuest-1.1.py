@@ -1,6 +1,6 @@
 import os
 import platform
-if platform.system == "Windows":
+if platform.system() == "Windows":
     clearMethod = 'cls'
 else:
     clearMethod = 'clear'
