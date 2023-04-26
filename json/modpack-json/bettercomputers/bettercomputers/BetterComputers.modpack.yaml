@@ -38,18 +38,6 @@ mods:
     name: BetterNether
     page: https://modrinth.com/mod/betternether
     directlink: https://cdn.modrinth.com/data/MpzVLzy5/versions/CnOsJRy8/better-nether-8.1.3.jar
-  betterf3:
-    name: BetterF3
-    page: https://modrinth.com/mod/betterf3
-    directlink: https://cdn.modrinth.com/data/8shC1gFX/versions/nuKBXZDI/BetterF3-5.1.0-Fabric-1.19.3.jar
-  zoomify:
-    name: Zoomify
-    page: https://modrinth.com/mod/zoomify
-    directlink: https://cdn.modrinth.com/data/w7ThoJFB/versions/p5RjeOJL/Zoomify-2.9.2.jar
-  continuity:
-    name: Continuity
-    page: https://modrinth.com/mod/continuity
-    directlink: https://cdn.modrinth.com/data/1IjD5062/versions/4h5IIa7B/continuity-3.0.0-beta.2%2B1.19.3.jar
   fabric-language-kotlin:
     name: Fabric Language Kotlin
     page: https://modrinth.com/mod/fabric-language-kotlin
@@ -90,10 +78,6 @@ mods:
     name: No Chat Reports
     page: https://modrinth.com/mod/no-chat-reports
     directlink: https://cdn.modrinth.com/data/qQyHxfxd/versions/uVt4LKvF/NoChatReports-FABRIC-1.19.3-v2.0.0.jar
-  memory-usage-screen:
-    name: Memory Usage Screen
-    page: https://modrinth.com/mod/memory-usage-screen
-    directlink: https://cdn.modrinth.com/data/n9mFA0ax/versions/qGGbrQAm/memoryusagescreen-fabric-mc1.19.3-1.7.0.jar
   cloth-config:
     name: Cloth Config API
     page: https://modrinth.com/mod/cloth-config
@@ -114,18 +98,6 @@ mods:
     name: Indium
     page: https://modrinth.com/mod/indium
     directlink: https://cdn.modrinth.com/data/Orvt0mRa/versions/U94NcDpV/indium-1.0.14%2Bmc1.19.3.jar
-  iris:
-    name: Iris Shaders
-    page: https://modrinth.com/mod/iris
-    directlink: https://cdn.modrinth.com/data/YL57xq9U/versions/ExtC2pRY/iris-mc1.19.3-1.5.2.jar
-  idwtialsimmoedm:
-    name: Idwtialsimmoedm
-    page: https://modrinth.com/mod/idwtialsimmoedm
-    directlink: https://cdn.modrinth.com/data/ad89WlWh/versions/5TNUL7rC/idwtialsimmoedm-0.2.0%2B1.19.3.jar
-  replaymod:
-    name: ReplayMod
-    page: https://modrinth.com/mod/replaymod
-    directlink: https://cdn.modrinth.com/data/Nv2fQJo5/versions/C1eDr4u8/replaymod-1.19.3-2.6.11.jar
 shaderpacks:
   complementary-v4:
     name: Complementary V4
