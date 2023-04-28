@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
 from os import chdir, mkdir, path
 import json
 import yaml
+import sys
 import requests
 import time
 
@@ -68,7 +70,7 @@ def download(file: str, yamlornot: bool) -> dict:
             else:
                 extension = '.zip'
 
-            file_name = project + extension
+            file_name = project['slug'] + extension
             
             if not path.isfile(projecttype + '/' + file_name):
                 downloadtimestart = time.time()
@@ -93,8 +95,20 @@ def download(file: str, yamlornot: bool) -> dict:
     }
 
 if __name__ == '__main__':
-    MAIN_FILE_NAME = 'BetterComputers.modpack.yaml'
-    thedownload = download(MAIN_FILE_NAME, True)
+    if len(sys.argv) >= 3:
+        MAIN_FILE_NAME = sys.argv[1]
+        jsonoryaml = MAIN_FILE_NAME[MAIN_FILE_NAME.rindex('.')+1:].lower()
+        if jsonoryaml == "yaml":
+            jsonoryamlbool = True
+        elif jsonoryaml == "json":
+            jsonoryamlbool = False
+    elif len(sys.argv) >= 2:
+        MAIN_FILE_NAME = sys.argv[1]
+        jsonoryamlbool = True
+    else:
+        MAIN_FILE_NAME = 'BetterComputers.modpack.yaml'
+        jsonoryamlbool = True
+    thedownload = download(MAIN_FILE_NAME, jsonoryamlbool)
     print(f"Your files are in downloaded/{MAIN_FILE_NAME[:MAIN_FILE_NAME.find('.')]}/\n")
     print("Overall, it took %.5f seconds to download everything." % thedownload['overall'])
     print("The average time it took for a mod/shader/resourcepack/datapack to download was %.5f seconds." % mean(thedownload['downloadtimes']))
