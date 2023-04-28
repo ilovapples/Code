@@ -70,7 +70,7 @@ def download(file: str, yamlornot: bool) -> dict:
             else:
                 extension = '.zip'
 
-            file_name = project['slug'] + extension
+            file_name = thedata[projecttype][project]['slug'] + extension
             
             if not path.isfile(projecttype + '/' + file_name):
                 downloadtimestart = time.time()
