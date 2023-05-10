@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BSI",
+        "GSS",
+        "BSI"
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:sponge"
+        },
+        "G": {
+            "item": "minecraft:gunpowder"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "B": {
+            "item": "minecraft:iron_block"
+        }
+    },
+    "result": {
+        "item": "opitems:sponge_pistol",
+        "count": 1
+    },
+    "group": "knockback_sticks"
+}
