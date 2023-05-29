@@ -1,4 +1,6 @@
-with open("en_us.json") as file:
+FILE_KEY_NAME = 'en_us' # file name without '.json'
+
+with open(FILE_KEY_NAME + '.json') as file:
     data = file.read()
     
 final = "{\n"
@@ -18,5 +20,5 @@ for line in data.split('\n'):
             .split(': ')[1]}
         ))
 final += "\n}"
-with open("en_us-item_key.json", 'w') as file:
+with open(f"{FILE_KEY_NAME}-item_key.json", 'w') as file:
     file.write(final[::-1].replace(',','',1)[::-1])
