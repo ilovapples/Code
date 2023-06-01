@@ -1,4 +1,5 @@
 import sys
+import os
 import json
 import python_nbt.nbt as nbt
 
@@ -75,7 +76,7 @@ def read_item(item_nbt: dict) -> dict:
                 for line in item_nbt['tag']['display']['Lore'].value:
                     print(f"    {line.value}")
                     item_data['extra']['lore'].append(line.value)
-
+                    
     if extra:
         print()
     return item_data
@@ -93,13 +94,35 @@ def read_file(world_name: str, write_to_file: bool, is_single_player: bool) -> d
         dict: the json data for the world's items 
     """
     print(f"Printing player items for world: '{world_name}' (in no specific order)\n")
-    data = nbt.read_from_nbt_file(world_name + '/level.dat')
     final_data = {}
 
-    if is_single_player:
+    if is_single_player: # singleplayer world
+        data = nbt.read_from_nbt_file(world_name + '/level.dat')
         final_data['items'] = []
         for item in data['Data']['Player']['Inventory']:
             final_data['items'].append(read_item(item))
+    else: # multiplayer/server vanilla server
+        cwd = os.getcwd()
+        if 'world' in os.listdir():
+            os.chdir('world/playerdata')
+            for player_file in [i for i in os.listdir() if i.endswith('.dat')]:
+                player_data = nbt.read_from_nbt_file(player_file)
+                print(f"Printing items for player with hex UUID: {player_file[:player_file.rindex('.')]}")
+                final_data[player_file[:player_file.rindex('.')]] = []
+                for item in player_data['Inventory']:
+                    final_data[player_file[:player_file.rindex('.')]].append(read_item(item))
+                    
+
+        elif world_name in os.listdir():
+            os.chdir(f'{world_name}/world/playerdata')
+            for player_file in [i for i in os.listdir() if i.endswith('.dat')]:
+                player_data = nbt.read_from_nbt_file(player_file)
+                print(f"Printing items for player with hex UUID: {player_file[:player_file.rindex('.')]}")
+                final_data[player_file[:player_file.rindex('.')]] = []
+                for item in player_data['Inventory']:
+                    final_data[player_file[:player_file.rindex('.')]].append(read_item(item))
+        os.chdir(cwd)
+        
     if write_to_file:
         with open(f'{world_name}-player_items.json', 'w', encoding='UTF-8') as file2write:
             file2write.write(json.dumps(final_data, indent=4))
@@ -120,7 +143,9 @@ if __name__ == "__main__":
     if '--single-player' in sys.argv:
         SINGLE_PLAYER = True
 
-    if not arg_exists(1):
-        usage()
+    # if not arg_exists(1):
+    #     usage()
 
-    read_file(sys.argv[1], WRITE_JSON_TO_FILE, SINGLE_PLAYER)
+    read_file('test_server', WRITE_JSON_TO_FILE, SINGLE_PLAYER)
+    
+    # read_file(sys.argv[1], WRITE_JSON_TO_FILE, SINGLE_PLAYER)
