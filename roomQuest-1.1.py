@@ -1,20 +1,24 @@
 import os
 import platform
+from getkey import keys, getkey
 if platform.system() == "Windows":
     clearMethod = 'cls'
 else:
     clearMethod = 'clear'
 def clear():
     os.system(clearMethod)
-rooms = ["bedRoom1", "entrance", "hallWay", "kitchen", "longHallWay", "bedRoom2", "mainRoom"]
-inBedRoom1 = ["YOU", "   ", "   ", "   ", "   ", "   ", "   "]
-inEntrance = ["   ", "YOU", "   ", "   ", "   ", "   ", "   "]
-inHallWay = ["   ", "   ", "YOU", "   ", "   ", "   ", "   "]
-inKitchen = ["   ", "   ", "   ", "YOU", "   ", "   ", "   "]
-inLongHallWay = ["   ", "   ", "   ", "   ", "YOU", "   ", "   "]
-inBedRoom2 = ["   ", "   ", "   ", "   ", "   ", "YOU", "   "]
-inMainRoom = ["   ", "   ", "   ", "   ", "   ", "   ", "YOU"]
-hasLeft = ["   ", "   ", "   ", "   ", "   ", "   ", "   "]
+rooms = ["bedRoom1", "entrance", "hallWay", "kitchen", "longHallWay", "bedRoom2", "mainRoom", "hasLeft", "shed", "startOfLongHallway"]
+inBedRoom1 = ["YOU", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   "]
+inEntrance = ["   ", "YOU", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   "]
+inHallWay = ["   ", "   ", "YOU", "   ", "   ", "   ", "   ", "   ", "   ", "   "]
+inKitchen = ["   ", "   ", "   ", "YOU", "   ", "   ", "   ", "   ", "   ", "   "]
+inLongHallWay = ["   ", "   ", "   ", "   ", "YOU", "   ", "   ", "   ", "   ", "   "]
+inBedRoom2 = ["   ", "   ", "   ", "   ", "   ", "YOU", "   ", "   ", "   ", "   "]
+inMainRoom = ["   ", "   ", "   ", "   ", "   ", "   ", "YOU", "   ", "   ", "   "]
+outside = ["   ", "   ", "   ", "   ", "   ", "   ", "   ", "YOU", "   ", "   "]
+inShed = ["   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "YOU", "   "]
+inStartOfLongHallway = ["   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "YOU"]
+nowhere = ["   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   "]
 inRoom = inBedRoom1
 def printBuilding():
     clear()
@@ -24,12 +28,12 @@ def printBuilding():
     print("     | |                  | |         |   %s   |" % inRoom[5])
     print("|‾‾‾‾   ‾‾‾‾|             | |         |___   ___|")
     print("|           |_____________| |_____________| |______")
-    print("|    %s                 %s              %s      |" % (inRoom[1], inRoom[2], inRoom[4]))
-    print("|____| |____|‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| |‾‾‾‾‾‾")
-    print("                                 |‾‾‾‾‾‾‾‾   ‾‾‾‾‾‾‾‾|")
-    print("                                 |                   |")
-    print("                                 |        %s        |" % inRoom[6])
-    print("                                 |                   |")
+    print("|    %s         %s     %s              %s      |" % (inRoom[1], inRoom[9], inRoom[2], inRoom[4]))
+    print("|____| |____|‾‾‾‾| |‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾| |‾‾‾‾‾‾")
+    print("                 | |             |‾‾‾‾‾‾‾‾   ‾‾‾‾‾‾‾‾|")
+    print("             |‾‾‾   ‾‾‾|_________|                   |")
+    print("     %s     |   %s             |        %s        |" % (inRoom[7], inRoom[8], inRoom[6]))
+    print("             |_________|‾‾‾‾‾‾‾‾‾|                   |")
     print("                                 |___________________|")
 def roomERROR(move):
     printBuilding()
@@ -39,12 +43,22 @@ def leave():
 
 printBuilding()
 while True:
-    move = input("Move (Down, Up, Left, Right): ").lower()
+    key = ""
+    print("Move (wasd, arrows): ", end='')
+    while True:
+        key = getkey()
+        print(key)
+        if key.lower() in "wasd":
+            move = key.lower()
+            break
+        elif key in [keys.UP, keys.DOWN, keys.LEFT, keys.RIGHT]:
+            move = {keys.UP: "w", keys.DOWN: "s", keys.LEFT: "a", keys.RIGHT: "d"}[key]
+            break
+    # move = input("Move (Down, Up, Left, Right): ").lower()
     if move == "":
         print("Invalid Move")
         printBuilding()
     else:
-
 
         if inRoom == inBedRoom1:
             if move == "s":
@@ -63,11 +77,11 @@ while True:
 
         elif inRoom == inEntrance:
             if move == "s":
-                inRoom = hasLeft
+                inRoom = outside
                 printBuilding()
-                quit()
+
             elif move == "d":
-                inRoom = inHallWay
+                inRoom = inStartOfLongHallway
                 printBuilding()
 
             elif move == "a":
@@ -76,6 +90,20 @@ while True:
             elif move == "w":
                 inRoom = inBedRoom1
                 printBuilding()
+
+
+        elif inRoom == inStartOfLongHallway:
+            if move == "s":
+                inRoom = inShed
+                printBuilding()
+            elif move == "d":
+                inRoom = inHallWay
+                printBuilding()
+            elif move == "a":
+                inRoom = inEntrance
+                printBuilding()
+            elif move == "w":
+                roomERROR("up")
 
 
         elif inRoom == inHallWay:
@@ -87,7 +115,7 @@ while True:
                 printBuilding()
 
             elif move == "a":
-                inRoom = inEntrance
+                inRoom = inStartOfLongHallway
                 printBuilding()
 
             elif move == "w":
@@ -151,8 +179,38 @@ while True:
                 roomERROR("right")
 
             elif move == "a":
-                roomERROR("left")
-            
+                inRoom = inShed
+                printBuilding()
+
             elif move == "w":
                 inRoom = inLongHallWay
+                printBuilding()
+        
+
+        elif inRoom == inShed:
+            if move == "s":
+                roomERROR("down")
+            elif move == "d":
+                inRoom = inMainRoom
+                printBuilding()
+            elif move == "a":
+                roomERROR("left")
+            elif move == "w":
+                inRoom = inStartOfLongHallway
+                printBuilding()
+
+        
+        elif inRoom == outside:
+            if move == "s":
+                inRoom = nowhere
+                printBuilding()
+                quit()
+            elif move == "d":
+                roomERROR("right")
+            elif move == "a":
+                inRoom = nowhere
+                printBuilding()
+                quit()
+            elif move == "w":
+                inRoom = inEntrance
                 printBuilding()

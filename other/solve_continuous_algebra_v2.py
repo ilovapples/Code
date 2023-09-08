@@ -4,7 +4,7 @@ import random
 clst2zero = 9000
 formula_for_clst2zero = []
 
-for i in range(70000):
+for i in range(5000):
     x = Symbol('x')
     s = []
     while len(s) < 4:

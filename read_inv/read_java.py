@@ -1,3 +1,5 @@
+# THIS PROGRAM HAS LIMITED FUNCTIONALITY FOR COMPLICATED RAW JSON FORMATTING IN ITEM NAMES
+
 import sys
 import os
 import json
@@ -22,7 +24,7 @@ def get_from_item_key(id_index: str, item_key: dict) -> str:
         index = 'block.' + id_index.replace(':', '.')
     try:
         return item_key[index]
-    except IndexError:
+    except KeyError or IndexError:
         return 'ITEM NAME NOT FOUND'
 
 
@@ -65,8 +67,10 @@ def read_item(item_nbt: dict) -> dict:
             item_data['extra']['damage'] = item_nbt['tag']['Damage'].value
         if 'display' in item_nbt['tag'].keys():
             if 'Name' in item_nbt['tag']['display']:
-                print(f"  Custom Name: \' \
-                      {json.loads(item_nbt['tag']['display']['Name'].value)['text']}\'")
+                if type(json.loads(item_nbt['tag']['display']['Name'].value)) == type({}):
+                    print(f"  Custom Name: \'{json.loads(item_nbt['tag']['display']['Name'].value)['text']}\'")
+                elif type(json.loads(item_nbt['tag']['display']['Name'].value)) == type([]):
+                    print(f"  Custom Name: \'{json.loads(item_nbt['tag']['display']['Name'].value)[0]['text']}\'")
                 item_data['extra']['custom_name'] = \
                     json.loads(item_nbt['tag']['display']['Name'].value)
 
@@ -124,14 +128,14 @@ def read_file(world_name: str, write_to_file: bool, is_single_player: bool) -> d
         os.chdir(cwd)
         
     if write_to_file:
-        with open(f'{world_name}-player_items.json', 'w', encoding='UTF-8') as file2write:
+        with open(f'written_json/{world_name}-player_items.json', 'w', encoding='UTF-8') as file2write:
             file2write.write(json.dumps(final_data, indent=4))
     return final_data
 
 def usage():
     """Shows usage statement
     """
-    print(f"usage: {sys.argv[0]} world_name [--write-json-to-file] [--single-player]")
+    print(f"usage: {sys.argv[0]} <world_name> [--write-json-to-file] [--single-player]")
     quit()
 
 
@@ -142,10 +146,12 @@ if __name__ == "__main__":
         WRITE_JSON_TO_FILE = True
     if '--single-player' in sys.argv:
         SINGLE_PLAYER = True
+    
+    if not arg_exists(1):
+        usage()
+    world_name = sys.argv[1]
+ 
 
-    # if not arg_exists(1):
-    #     usage()
-
-    read_file('test_server', WRITE_JSON_TO_FILE, SINGLE_PLAYER)
+    read_file(world_name, WRITE_JSON_TO_FILE, SINGLE_PLAYER)
     
     # read_file(sys.argv[1], WRITE_JSON_TO_FILE, SINGLE_PLAYER)

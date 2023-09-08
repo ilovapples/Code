@@ -1,0 +1,100 @@
+{
+    "items": [
+        {
+            "name": "Wooden Axe",
+            "id": "minecraft:wooden_axe",
+            "count": 1,
+            "extra": {
+                "damage": 0
+            }
+        },
+        {
+            "name": "Oak Sign",
+            "id": "minecraft:oak_sign",
+            "count": 1
+        },
+        {
+            "name": "Light Blue Wool",
+            "id": "minecraft:light_blue_wool",
+            "count": 1
+        },
+        {
+            "name": "Redstone Lamp",
+            "id": "minecraft:redstone_lamp",
+            "count": 1
+        },
+        {
+            "name": "Redstone Dust",
+            "id": "minecraft:redstone",
+            "count": 1
+        },
+        {
+            "name": "Redstone Torch",
+            "id": "minecraft:redstone_torch",
+            "count": 1
+        },
+        {
+            "name": "Lever",
+            "id": "minecraft:lever",
+            "count": 1
+        },
+        {
+            "name": "Redstone Comparator",
+            "id": "minecraft:comparator",
+            "count": 1
+        },
+        {
+            "name": "Redstone Repeater",
+            "id": "minecraft:repeater",
+            "count": 1
+        },
+        {
+            "name": "Gray Wool",
+            "id": "minecraft:gray_wool",
+            "count": 1
+        },
+        {
+            "name": "Barrel",
+            "id": "minecraft:barrel",
+            "count": 5,
+            "extra": {
+                "custom_name": {
+                    "text": "Barrel (15)"
+                },
+                "lore": [
+                    "\"(+NBT)\""
+                ]
+            }
+        },
+        {
+            "name": "Glass",
+            "id": "minecraft:glass",
+            "count": 1
+        },
+        {
+            "name": "Sandstone",
+            "id": "minecraft:sandstone",
+            "count": 1
+        },
+        {
+            "name": "Black Concrete",
+            "id": "minecraft:black_concrete",
+            "count": 1
+        },
+        {
+            "name": "Red Wool",
+            "id": "minecraft:red_wool",
+            "count": 1
+        },
+        {
+            "name": "Light Gray Wool",
+            "id": "minecraft:light_gray_wool",
+            "count": 1
+        },
+        {
+            "name": "Purple Wool",
+            "id": "minecraft:purple_wool",
+            "count": 1
+        }
+    ]
+}

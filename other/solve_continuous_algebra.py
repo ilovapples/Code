@@ -4,7 +4,7 @@ import random
 largest_int = 0
 formula_for_largest_int = 0
 
-for i in range(29000):
+for i in range(5000):
     x = Symbol('x')
     s = []
     while len(s) < 6:

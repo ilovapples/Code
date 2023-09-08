@@ -1,0 +1,296 @@
+{
+    "af04d0a4-942e-4af8-9216-8379fb6947df": [
+        {
+            "name": "Netherite Axe",
+            "id": "minecraft:netherite_axe",
+            "count": 1,
+            "extra": {
+                "damage": 0
+            }
+        },
+        {
+            "name": "Netherite Axe",
+            "id": "minecraft:netherite_axe",
+            "count": 1,
+            "extra": {
+                "damage": 0
+            }
+        },
+        {
+            "name": "Lever",
+            "id": "minecraft:lever",
+            "count": 2
+        },
+        {
+            "name": "Wooden Axe",
+            "id": "minecraft:wooden_axe",
+            "count": 1,
+            "extra": {
+                "damage": 0
+            }
+        },
+        {
+            "name": "Command Block",
+            "id": "minecraft:command_block",
+            "count": 1
+        },
+        {
+            "name": "Wheat Seeds",
+            "id": "minecraft:wheat_seeds",
+            "count": 3
+        },
+        {
+            "name": "Repeating Command Block",
+            "id": "minecraft:repeating_command_block",
+            "count": 1
+        },
+        {
+            "name": "Netherite Helmet",
+            "id": "minecraft:netherite_helmet",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Helmet",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Netherite Chestplate",
+            "id": "minecraft:netherite_chestplate",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Chestplate",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Netherite Chestplate",
+            "id": "minecraft:netherite_chestplate",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Chestplate",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Netherite Chestplate",
+            "id": "minecraft:netherite_chestplate",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Chestplate",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Netherite Helmet",
+            "id": "minecraft:netherite_helmet",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Helmet",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Nether Star",
+            "id": "minecraft:nether_star",
+            "count": 4
+        },
+        {
+            "name": "Raw Salmon",
+            "id": "minecraft:salmon",
+            "count": 2
+        },
+        {
+            "name": "Bone Meal",
+            "id": "minecraft:bone_meal",
+            "count": 1
+        },
+        {
+            "name": "Rotten Flesh",
+            "id": "minecraft:rotten_flesh",
+            "count": 4
+        },
+        {
+            "name": "Grass Block",
+            "id": "minecraft:grass_block",
+            "count": 1
+        },
+        {
+            "name": "Blue Ice",
+            "id": "minecraft:blue_ice",
+            "count": 1
+        },
+        {
+            "name": "Bedrock",
+            "id": "minecraft:bedrock",
+            "count": 1
+        },
+        {
+            "name": "Netherite Leggings",
+            "id": "minecraft:netherite_leggings",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Leggings",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Netherite Chestplate",
+            "id": "minecraft:netherite_chestplate",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Chestplate",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Netherite Helmet",
+            "id": "minecraft:netherite_helmet",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Helmet",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Stick",
+            "id": "minecraft:stick",
+            "count": 4,
+            "extra": {
+                "custom_name": [
+                    {
+                        "text": "Better Knockback Stick",
+                        "italic": false
+                    }
+                ]
+            }
+        }
+    ],
+    "222f3a43-eea4-41f3-9b4e-21a2302dc1e2": [
+        {
+            "name": "Netherite Axe",
+            "id": "minecraft:netherite_axe",
+            "count": 1,
+            "extra": {
+                "damage": 0
+            }
+        },
+        {
+            "name": "Lever",
+            "id": "minecraft:lever",
+            "count": 2
+        },
+        {
+            "name": "Wooden Axe",
+            "id": "minecraft:wooden_axe",
+            "count": 1,
+            "extra": {
+                "damage": 0
+            }
+        },
+        {
+            "name": "Netherite Chestplate",
+            "id": "minecraft:netherite_chestplate",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Chestplate",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Nether Star",
+            "id": "minecraft:nether_star",
+            "count": 4
+        },
+        {
+            "name": "Blue Ice",
+            "id": "minecraft:blue_ice",
+            "count": 1
+        },
+        {
+            "name": "Netherite Leggings",
+            "id": "minecraft:netherite_leggings",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Leggings",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Netherite Helmet",
+            "id": "minecraft:netherite_helmet",
+            "count": 1,
+            "extra": {
+                "damage": 0,
+                "custom_name": [
+                    {
+                        "text": "Unbreaking Helmet",
+                        "italic": false
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Stick",
+            "id": "minecraft:stick",
+            "count": 4,
+            "extra": {
+                "custom_name": [
+                    {
+                        "text": "Better Knockback Stick",
+                        "italic": false
+                    }
+                ]
+            }
+        }
+    ]
+}
