@@ -1,26 +1,34 @@
 import random
 
 
-class options():
+class Game():
     p_count = 0
-    what_player_is_dealer = 0
-    def get(self):
+    player_cards = {}
+    __deck = []
+
+    def __init__(self):
+        global p_count, player_cards, __deck
         while True:
             # get valid player count
             try:
-                self.p_count = int(input("Player Count (1-4): "))
-                if self.p_count < 1 or self.p_count > 4:
+                p_count = int(input("Player Count (1-4): "))
+                if p_count < 1 or p_count > 4:
                     continue
                 break
-            except:
+            except ValueError:
                 continue
-        
-        while True:
-            # get valid dealer player number
-            try:
-                self.what_player_is_dealer = int(input("Number of Player that is dealer (1-4): "))
-                if self.what_player_is_dealer < 1 or self.what_player_is_dealer > self.p_count:
-                    continue
-                break
-            except:
-                continue
+
+
+
+        __deck = [
+            "Ace of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts", "6 of Hearts", "7 of Hearts", "8 of Hearts", "9 of Hearts", "10 of Hearts", "Jack of Hearts", "Queen of Hearts", "King of Hearts",
+            "Ace of Spades", "2 of Spades", "3 of Spades", "4 of Spades", "5 of Spades", "6 of Spades", "7 of Spades", "8 of Spades", "9 of Spades", "10 of Spades", "Jack of Spades", "Queen of Spades", "King of Spades",
+            "Ace of Clubs", "2 of Clubs", "3 of Clubs", "4 of Clubs", "5 of Clubs", "6 of Clubs", "7 of Clubs", "8 of Clubs", "9 of Clubs", "10 of Clubs", "Jack of Clubs", "Queen of Clubs", "King of Clubs",
+            "Ace of Diamonds", "2 of Diamonds", "3 of Diamonds", "4 of Diamonds", "5 of Diamonds", "6 of Diamonds", "7 of Diamonds", "8 of Diamonds", "9 of Diamonds", "10 of Diamonds", "Jack of Diamonds", "Queen of Diamonds", "King of Diamonds"
+        ]
+        random.shuffle(__deck)
+        player_cards = {f"Player {str(num)}":[] for num in range(p_count)}
+        print(__deck)
+
+a = Game()
+print(a.player_cards, '\n', a.p_count)
