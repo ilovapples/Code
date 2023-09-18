@@ -1,3 +1,23 @@
+def convert_board(board: list):
+    try:
+        board[8]
+        t = "0"
+    except IndexError:
+        t = "1"
+
+    if t == "0":
+        converted = [0]*9
+        for i in range(9):
+            converted[i] = {"O": -1, "X": 1, " ": 0, "_": 0}[board[i]]
+        
+    elif t == "1":
+        converted = [[0]*3]*3
+        for i in range(3):
+            for k in range(3):
+                converted[i][k] = {"O": -1, "X": 1, " ": 0, "_": 0}[board[i][k]]
+        
+    return converted
+
 
 def get_winner(board: list):
     try:
@@ -8,9 +28,7 @@ def get_winner(board: list):
         # random garbage
 
     if t == "0":
-        converted = [0]*9
-        for i in range(9):
-            converted[i] = {"O": -1, "X": 1, " ": 0, "_": 0}[board[i]]
+        converted = convert_board(board)
         
         to_check = [
             [0,1,2], [3,4,5], [6,7,8], #horizontal
@@ -27,10 +45,7 @@ def get_winner(board: list):
                 if p is to_check[-1]:
                     return False
 
-    converted = [[0]*3]*3
-    for i in range(3):
-        for k in range(3):
-            converted[i][k] = {"O": -1, "X": 1, " ": 0, "_": 0}[board[i][k]]
+    converted = convert_board(board)
 
     to_check = [
         # horizontal

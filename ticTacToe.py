@@ -9,7 +9,7 @@ if platform.system == "Windows":
 else:
     clearValue = 'clear'
 
-from check_tictactoe_winners import get_winner
+from check_tictactoe_winners import *
 
 
 def clear():
@@ -80,6 +80,9 @@ while stillPlaying == "y":
 
         if get_winner(board):
             print(f"Player {get_winner(board)} got 3 in a row!")
+            gameEnd()
+        elif not get_winner(board) and board.count("_") == 0:
+            print("It's a tie!")
             gameEnd()
 
     else:
