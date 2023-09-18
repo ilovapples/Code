@@ -1,7 +1,7 @@
 package main
 import ("fmt")
 
-func main() {
+func test() {
 	num1 := 5;
 	num2 := 8;
 	num3 := 15;

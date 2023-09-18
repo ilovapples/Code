@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func numguess() {
 	fmt.Println("\033[1mNumber Guessing Game\033[0m\n")
 	min, max := 1, 10
 	randnum := rand.Intn(max-1) + 1;
